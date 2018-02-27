@@ -6,11 +6,33 @@ ModelImporter:
   serializedVersion: 22
   fileIDToRecycleName:
     100000: //RootNode
+    100002: porp_shotgun_mainother1
+    100004: porp_shotgun_mainother2
+    100006: porp_shotgun_mainother3
+    100008: prop_shotgun_reload1
+    100010: prop_shotgun_trigger1
+    100012: transform2
+    100014: transform3
+    100016: transform4
+    100018: transform5
     400000: //RootNode
+    400002: porp_shotgun_mainother1
+    400004: porp_shotgun_mainother2
+    400006: porp_shotgun_mainother3
+    400008: prop_shotgun_reload1
+    400010: prop_shotgun_trigger1
+    400012: transform2
+    400014: transform3
+    400016: transform4
+    400018: transform5
     2100000: shotgun
+    2100002: shotgun1
     2300000: //RootNode
+    2300002: porp_shotgun_mainother3
     3300000: //RootNode
+    3300002: porp_shotgun_mainother3
     4300000: prop_wep_shotgun
+    4300002: porp_shotgun_mainother3
     9500000: //RootNode
   externalObjects: {}
   materials:
