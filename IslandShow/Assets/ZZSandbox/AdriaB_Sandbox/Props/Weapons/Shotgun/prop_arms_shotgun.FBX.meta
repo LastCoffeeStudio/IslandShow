@@ -1,6 +1,6 @@
 fileFormatVersion: 2
-guid: 9ec2ca5174ee3b64f806d3bdcaa99f3b
-timeCreated: 1519758603
+guid: e9ea2c82bfd5aa04698f0659df58d917
+timeCreated: 1519759841
 licenseType: Free
 ModelImporter:
   serializedVersion: 22
@@ -10,7 +10,7 @@ ModelImporter:
     100004: ARMS_GLOBAL_CONTROL
     100006: ARMS_GLOBAL_SCALE
     100008: ARMS_JOINS
-    100010: ARMS_MAIN
+    100010: Control_free_hand
     100012: LeftCollar01
     100014: LeftCollar02
     100016: LeftElbow_Ctrl_FK
@@ -62,68 +62,72 @@ ModelImporter:
     100108: LeftTwist_RESOLVE
     100110: LeftUpperArm_Ctrl_FK
     100112: LeftUpperArm_Grp_FK
-    100114: prop_player_arms
-    100116: RightCollar01
-    100118: RightCollar02
-    100120: RightElbow_Ctrl_FK
-    100122: RightElbow_FK_01
-    100124: RightElbow_FK_02
-    100126: RightElbow_FK_END_03
-    100128: RightElbow_Grp_FK
-    100130: RightElbow_IK_01
-    100132: RightElbow_IK_02
-    100134: RightElbow_IK_03
-    100136: RightElbow_RESOLVE_01
-    100138: RightElbow_RESOLVE_02
-    100140: RightElbow_RESOLVE_END_03
-    100142: RightElbowControl_IK
-    100144: RightHand
-    100146: RightHand2
-    100148: RightHand_Ctrl
-    100150: RightHand_Grp
-    100152: RightHand_Grp_Top
-    100154: RightHandl_IK
-    100156: RightHandle_Ctrl_IK
-    100158: RightHandle_Grp_IK
-    100160: RightIndexFinger1
-    100162: RightIndexFinger2
-    100164: RightIndexFinger3
-    100166: RightIndexFinger4
-    100168: RightMiddleFinger1
-    100170: RightMiddleFinger2
-    100172: RightMiddleFinger3
-    100174: RightMiddleFinger4
-    100176: RightPinkyFinger1
-    100178: RightPinkyFinger2
-    100180: RightPinkyFinger3
-    100182: RightPinkyFinger4
-    100184: RightRingFinger1
-    100186: RightRingFinger2
-    100188: RightRingFinger3
-    100190: RightRingFinger4
-    100192: RightShoulder01
-    100194: RightShoulder02
-    100196: RightShoulder_FK_02
-    100198: RightShoulder_IK_02
-    100200: RightShoulder_RESOLVE_02
-    100202: RightShoulderTwist_RESOLVE_03
-    100204: RightThumb1
-    100206: RightThumb2
-    100208: RightThumb3
-    100210: RightThumb4
-    100212: RightTwist_RESOLVE
-    100214: RightUpperArm_Ctrl_FK
-    100216: RightUpperArm_Grp_FK
-    100218: ROOT
-    100220: //RootNode
-    100222: wep_rg_main
-    100224: wep_rg_trigger
+    100114: porp_shotgun_mainother
+    100116: //RootNode
+    100118: prop_player_arms
+    100120: prop_shotgun_ammo
+    100122: prop_shotgun_main
+    100124: prop_shotgun_reload
+    100126: prop_shotgun_trigger
+    100128: RightCollar01
+    100130: RightCollar02
+    100132: RightElbow_Ctrl_FK
+    100134: RightElbow_FK_01
+    100136: RightElbow_FK_02
+    100138: RightElbow_FK_END_03
+    100140: RightElbow_Grp_FK
+    100142: RightElbow_IK_01
+    100144: RightElbow_IK_02
+    100146: RightElbow_IK_03
+    100148: RightElbow_RESOLVE_01
+    100150: RightElbow_RESOLVE_02
+    100152: RightElbow_RESOLVE_END_03
+    100154: RightElbowControl_IK
+    100156: RightHand
+    100158: RightHand2
+    100160: RightHand_Ctrl
+    100162: RightHand_Grp
+    100164: RightHand_Grp_Top
+    100166: RightHandl_IK
+    100168: RightHandle_Ctrl_IK
+    100170: RightHandle_Grp_IK
+    100172: RightIndexFinger1
+    100174: RightIndexFinger2
+    100176: RightIndexFinger3
+    100178: RightIndexFinger4
+    100180: RightMiddleFinger1
+    100182: RightMiddleFinger2
+    100184: RightMiddleFinger3
+    100186: RightMiddleFinger4
+    100188: RightPinkyFinger1
+    100190: RightPinkyFinger2
+    100192: RightPinkyFinger3
+    100194: RightPinkyFinger4
+    100196: RightRingFinger1
+    100198: RightRingFinger2
+    100200: RightRingFinger3
+    100202: RightRingFinger4
+    100204: RightShoulder01
+    100206: RightShoulder02
+    100208: RightShoulder_FK_02
+    100210: RightShoulder_IK_02
+    100212: RightShoulder_RESOLVE_02
+    100214: RightShoulderTwist_RESOLVE_03
+    100216: RightThumb1
+    100218: RightThumb2
+    100220: RightThumb3
+    100222: RightThumb4
+    100224: RightTwist_RESOLVE
+    100226: RightUpperArm_Ctrl_FK
+    100228: RightUpperArm_Grp_FK
+    100230: ROOT
+    100232: transform1
     400000: ARMS_CONTROL
     400002: ARMS_GEO
     400004: ARMS_GLOBAL_CONTROL
     400006: ARMS_GLOBAL_SCALE
     400008: ARMS_JOINS
-    400010: ARMS_MAIN
+    400010: Control_free_hand
     400012: LeftCollar01
     400014: LeftCollar02
     400016: LeftElbow_Ctrl_FK
@@ -175,71 +179,81 @@ ModelImporter:
     400108: LeftTwist_RESOLVE
     400110: LeftUpperArm_Ctrl_FK
     400112: LeftUpperArm_Grp_FK
-    400114: prop_player_arms
-    400116: RightCollar01
-    400118: RightCollar02
-    400120: RightElbow_Ctrl_FK
-    400122: RightElbow_FK_01
-    400124: RightElbow_FK_02
-    400126: RightElbow_FK_END_03
-    400128: RightElbow_Grp_FK
-    400130: RightElbow_IK_01
-    400132: RightElbow_IK_02
-    400134: RightElbow_IK_03
-    400136: RightElbow_RESOLVE_01
-    400138: RightElbow_RESOLVE_02
-    400140: RightElbow_RESOLVE_END_03
-    400142: RightElbowControl_IK
-    400144: RightHand
-    400146: RightHand2
-    400148: RightHand_Ctrl
-    400150: RightHand_Grp
-    400152: RightHand_Grp_Top
-    400154: RightHandl_IK
-    400156: RightHandle_Ctrl_IK
-    400158: RightHandle_Grp_IK
-    400160: RightIndexFinger1
-    400162: RightIndexFinger2
-    400164: RightIndexFinger3
-    400166: RightIndexFinger4
-    400168: RightMiddleFinger1
-    400170: RightMiddleFinger2
-    400172: RightMiddleFinger3
-    400174: RightMiddleFinger4
-    400176: RightPinkyFinger1
-    400178: RightPinkyFinger2
-    400180: RightPinkyFinger3
-    400182: RightPinkyFinger4
-    400184: RightRingFinger1
-    400186: RightRingFinger2
-    400188: RightRingFinger3
-    400190: RightRingFinger4
-    400192: RightShoulder01
-    400194: RightShoulder02
-    400196: RightShoulder_FK_02
-    400198: RightShoulder_IK_02
-    400200: RightShoulder_RESOLVE_02
-    400202: RightShoulderTwist_RESOLVE_03
-    400204: RightThumb1
-    400206: RightThumb2
-    400208: RightThumb3
-    400210: RightThumb4
-    400212: RightTwist_RESOLVE
-    400214: RightUpperArm_Ctrl_FK
-    400216: RightUpperArm_Grp_FK
-    400218: ROOT
-    400220: //RootNode
-    400222: wep_rg_main
-    400224: wep_rg_trigger
+    400114: porp_shotgun_mainother
+    400116: //RootNode
+    400118: prop_player_arms
+    400120: prop_shotgun_ammo
+    400122: prop_shotgun_main
+    400124: prop_shotgun_reload
+    400126: prop_shotgun_trigger
+    400128: RightCollar01
+    400130: RightCollar02
+    400132: RightElbow_Ctrl_FK
+    400134: RightElbow_FK_01
+    400136: RightElbow_FK_02
+    400138: RightElbow_FK_END_03
+    400140: RightElbow_Grp_FK
+    400142: RightElbow_IK_01
+    400144: RightElbow_IK_02
+    400146: RightElbow_IK_03
+    400148: RightElbow_RESOLVE_01
+    400150: RightElbow_RESOLVE_02
+    400152: RightElbow_RESOLVE_END_03
+    400154: RightElbowControl_IK
+    400156: RightHand
+    400158: RightHand2
+    400160: RightHand_Ctrl
+    400162: RightHand_Grp
+    400164: RightHand_Grp_Top
+    400166: RightHandl_IK
+    400168: RightHandle_Ctrl_IK
+    400170: RightHandle_Grp_IK
+    400172: RightIndexFinger1
+    400174: RightIndexFinger2
+    400176: RightIndexFinger3
+    400178: RightIndexFinger4
+    400180: RightMiddleFinger1
+    400182: RightMiddleFinger2
+    400184: RightMiddleFinger3
+    400186: RightMiddleFinger4
+    400188: RightPinkyFinger1
+    400190: RightPinkyFinger2
+    400192: RightPinkyFinger3
+    400194: RightPinkyFinger4
+    400196: RightRingFinger1
+    400198: RightRingFinger2
+    400200: RightRingFinger3
+    400202: RightRingFinger4
+    400204: RightShoulder01
+    400206: RightShoulder02
+    400208: RightShoulder_FK_02
+    400210: RightShoulder_IK_02
+    400212: RightShoulder_RESOLVE_02
+    400214: RightShoulderTwist_RESOLVE_03
+    400216: RightThumb1
+    400218: RightThumb2
+    400220: RightThumb3
+    400222: RightThumb4
+    400224: RightTwist_RESOLVE
+    400226: RightUpperArm_Ctrl_FK
+    400228: RightUpperArm_Grp_FK
+    400230: ROOT
+    400232: transform1
     2100000: male_generic
-    2100002: gun1
-    2300000: wep_rg_main
-    2300002: wep_rg_trigger
-    3300000: wep_rg_main
-    3300002: wep_rg_trigger
+    2100002: shotgun1
+    2300000: porp_shotgun_mainother
+    2300002: prop_shotgun_ammo
+    2300004: prop_shotgun_reload
+    2300006: prop_shotgun_trigger
+    3300000: porp_shotgun_mainother
+    3300002: prop_shotgun_ammo
+    3300004: prop_shotgun_reload
+    3300006: prop_shotgun_trigger
     4300000: prop_player_arms
-    4300002: wep_rg_main
-    4300004: wep_rg_trigger
+    4300002: prop_shotgun_ammo
+    4300004: prop_shotgun_reload
+    4300006: prop_shotgun_trigger
+    4300008: porp_shotgun_mainother
     7400000: Take 001
     9500000: //RootNode
     13700000: prop_player_arms
@@ -294,10 +308,10 @@ ModelImporter:
     secondaryUVPackMargin: 4
     useFileScale: 1
   tangentSpace:
-    normalSmoothAngle: 39
+    normalSmoothAngle: 60
     normalImportMode: 0
-    tangentImportMode: 0
-    normalCalculationMode: 2
+    tangentImportMode: 3
+    normalCalculationMode: 4
   importAnimation: 1
   copyAvatar: 0
   humanDescription:
