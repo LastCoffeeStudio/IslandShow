@@ -1,23 +1,16 @@
 fileFormatVersion: 2
-guid: 9c56ce9c87438a24a9ac9eca6d86b6e5
-timeCreated: 1519736106
+guid: 9136b8bcc5f61484b8be287fdaebd1d2
+timeCreated: 1519754398
 licenseType: Free
 ModelImporter:
   serializedVersion: 22
   fileIDToRecycleName:
     100000: //RootNode
-    100002: wep_rg_main
-    100004: wep_rg_trigger
     400000: //RootNode
-    400002: wep_rg_main
-    400004: wep_rg_trigger
     2100000: gun
-    2300000: wep_rg_main
-    2300002: wep_rg_trigger
-    3300000: wep_rg_main
-    3300002: wep_rg_trigger
+    2300000: //RootNode
+    3300000: //RootNode
     4300000: wep_rg_main
-    4300002: wep_rg_trigger
     9500000: //RootNode
   externalObjects: {}
   materials:
