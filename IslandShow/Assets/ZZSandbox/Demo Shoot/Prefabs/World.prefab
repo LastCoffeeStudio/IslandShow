@@ -80,7 +80,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0583ca0d4a663ac46ae61a4fb5e0ca86, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  agentPrefab: {fileID: 4699571927639146, guid: ea26844989fcb8d4abf2218431bd631a,
+  agentPrefab: {fileID: 4190641036543938, guid: b2733f39735bd0242afce79aa139f9ec,
     type: 2}
   nAgents: 20
   agents: []
