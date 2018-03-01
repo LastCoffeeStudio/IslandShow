@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
+  m_IndirectSpecularColor: {r: 0.17488503, g: 0.21876863, b: 0.30105168, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -89,7 +89,8 @@ LightmapSettings:
     m_PVRFilteringAtrousPositionSigmaIndirect: 2
     m_PVRFilteringAtrousPositionSigmaAO: 1
     m_ShowResolutionOverlay: 1
-  m_LightingDataAsset: {fileID: 0}
+  m_LightingDataAsset: {fileID: 112000002, guid: c25f87fe7896e4a44bb7b56922b372f7,
+    type: 2}
   m_UseShadowmask: 0
 --- !u!196 &4
 NavMeshSettings:
@@ -233,13 +234,13 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 894881360}
-  m_LocalRotation: {x: 0.40821788, y: -0.23456968, z: 0.10938163, w: 0.8754261}
-  m_LocalPosition: {x: 0, y: 3, z: 0}
+  m_LocalRotation: {x: 0.6755148, y: -0.25757277, z: 0.025371142, w: 0.6904291}
+  m_LocalPosition: {x: 0, y: 306, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
+  m_LocalEulerAnglesHint: {x: 71.060005, y: -98.02801, z: -74.622}
 --- !u!1001 &957142185
 Prefab:
   m_ObjectHideFlags: 0
@@ -247,46 +248,37 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 4191903787758516, guid: 31cfdb99ef6a05a4ba9c564a232d1a8c, type: 2}
+    - target: {fileID: 4841957047373552, guid: 31cfdb99ef6a05a4ba9c564a232d1a8c, type: 2}
       propertyPath: m_LocalPosition.x
       value: -466
       objectReference: {fileID: 0}
-    - target: {fileID: 4191903787758516, guid: 31cfdb99ef6a05a4ba9c564a232d1a8c, type: 2}
+    - target: {fileID: 4841957047373552, guid: 31cfdb99ef6a05a4ba9c564a232d1a8c, type: 2}
       propertyPath: m_LocalPosition.y
       value: 68.04
       objectReference: {fileID: 0}
-    - target: {fileID: 4191903787758516, guid: 31cfdb99ef6a05a4ba9c564a232d1a8c, type: 2}
+    - target: {fileID: 4841957047373552, guid: 31cfdb99ef6a05a4ba9c564a232d1a8c, type: 2}
       propertyPath: m_LocalPosition.z
       value: -4
       objectReference: {fileID: 0}
-    - target: {fileID: 4191903787758516, guid: 31cfdb99ef6a05a4ba9c564a232d1a8c, type: 2}
+    - target: {fileID: 4841957047373552, guid: 31cfdb99ef6a05a4ba9c564a232d1a8c, type: 2}
       propertyPath: m_LocalRotation.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4191903787758516, guid: 31cfdb99ef6a05a4ba9c564a232d1a8c, type: 2}
+    - target: {fileID: 4841957047373552, guid: 31cfdb99ef6a05a4ba9c564a232d1a8c, type: 2}
       propertyPath: m_LocalRotation.y
       value: 0.7891913
       objectReference: {fileID: 0}
-    - target: {fileID: 4191903787758516, guid: 31cfdb99ef6a05a4ba9c564a232d1a8c, type: 2}
+    - target: {fileID: 4841957047373552, guid: 31cfdb99ef6a05a4ba9c564a232d1a8c, type: 2}
       propertyPath: m_LocalRotation.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4191903787758516, guid: 31cfdb99ef6a05a4ba9c564a232d1a8c, type: 2}
+    - target: {fileID: 4841957047373552, guid: 31cfdb99ef6a05a4ba9c564a232d1a8c, type: 2}
       propertyPath: m_LocalRotation.w
       value: 0.61414754
       objectReference: {fileID: 0}
-    - target: {fileID: 4191903787758516, guid: 31cfdb99ef6a05a4ba9c564a232d1a8c, type: 2}
+    - target: {fileID: 4841957047373552, guid: 31cfdb99ef6a05a4ba9c564a232d1a8c, type: 2}
       propertyPath: m_RootOrder
       value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 4191903787758516, guid: 31cfdb99ef6a05a4ba9c564a232d1a8c, type: 2}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 104.22
-      objectReference: {fileID: 0}
-    - target: {fileID: 114710413758925558, guid: 31cfdb99ef6a05a4ba9c564a232d1a8c,
-        type: 2}
-      propertyPath: swagLook
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 31cfdb99ef6a05a4ba9c564a232d1a8c, type: 2}
