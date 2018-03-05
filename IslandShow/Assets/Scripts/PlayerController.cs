@@ -52,6 +52,10 @@ public class PlayerController : MonoBehaviour {
     private Vector3 positionCameraAgac;
     private Vector3 positionCameraOr = new Vector3(0, 0.5f, 0.29f);
 
+	//noiseValue must be modified whenever the player makes noise. Higher values mean enemies will hear you from further away.
+	//At the start of the update() method, reset noiseValue to 0.
+	public float noiseValue = 0f;
+
     void Start () {
         rb = GetComponent<Rigidbody>();
         animator = gameObject.GetComponentInChildren<Animator>();
@@ -73,6 +77,8 @@ public class PlayerController : MonoBehaviour {
 
     void Update ()
     {
+		noiseValue = 0f;
+
         checkInput();
     }
 

@@ -19,18 +19,12 @@ public class AITurret : MonoBehaviour {
 	float viewDistance = 50.0f;
 
 	[SerializeField]
-	float hearingDistance = 20.0f;
-
-	[SerializeField]
-	float shootingDistance = 50.0f;
-
-	[SerializeField]
 	float alertTime = 6.0f;
 
 	[SerializeField]
 	float alertRotationTime = 1.0f;
 
-	Player player;
+	PlayerController player;
 
 	[SerializeField]
 	LayerMask viewMask;
@@ -46,7 +40,7 @@ public class AITurret : MonoBehaviour {
 	// Use this for initialization
 	void Start () 
 	{
-		player = FindObjectOfType<Player>();
+		player = FindObjectOfType<PlayerController>();
 		myTurrets = gameObject.GetComponentsInChildren<Turret> ();
 	}
 
@@ -128,7 +122,5 @@ public class AITurret : MonoBehaviour {
 	{
 		Gizmos.color = Color.white;
 		Gizmos.DrawRay (transform.position, transform.forward * viewDistance);
-
-		Gizmos.DrawWireSphere (transform.position, hearingDistance);
 	}
 }

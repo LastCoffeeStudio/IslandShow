@@ -3,8 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
-public class NPCPatrol : MonoBehaviour 
-{
+public class AIWazI : MonoBehaviour {
+
 	public enum state 
 	{
 		WALKING,
@@ -28,12 +28,6 @@ public class NPCPatrol : MonoBehaviour
 	float viewDistance = 50.0f;
 
 	[SerializeField]
-	float hearingDistance = 20.0f;
-
-	[SerializeField]
-	float hearingThreshold = 10.0f;
-
-	[SerializeField]
 	float shootingDistance = 20.0f;
 
 	[SerializeField]
@@ -44,7 +38,7 @@ public class NPCPatrol : MonoBehaviour
 
 	Light spotLight;
 	float viewAngle;
-	Player player;
+	PlayerController player;
 
 	[SerializeField]
 	LayerMask viewMask;
@@ -61,7 +55,7 @@ public class NPCPatrol : MonoBehaviour
 
 	state NPCstate;
 
-		
+
 	// Use this for initialization
 	void Start () {
 		navMeshAgent = this.GetComponent<NavMeshAgent> ();
@@ -86,110 +80,110 @@ public class NPCPatrol : MonoBehaviour
 
 		spotLight = gameObject.GetComponentInChildren<Light> ();
 		viewAngle = spotLight.spotAngle / 2;
-		player = FindObjectOfType<Player>();
+		player = FindObjectOfType<PlayerController>();
 		myTurrets = gameObject.GetComponentsInChildren<Turret> ();
 	}
-	
+
 	// Update is called once per frame
 	void Update () 
 	{
 		switch (NPCstate) 
 		{
-			case state.WALKING:
-				spotLight.color = Color.green;
-				if (navMeshAgent.remainingDistance <= 1.0f) 
-				{
-					waitTimer = 0.0f;
-					NPCstate = state.WAITING;
-				}
-				break;
+		case state.WALKING:
+			spotLight.color = Color.green;
+			if (navMeshAgent.remainingDistance <= 1.0f) 
+			{
+				waitTimer = 0.0f;
+				NPCstate = state.WAITING;
+			}
+			break;
 
-			case state.WAITING:
-				spotLight.color = Color.green;
-				waitTimer += Time.deltaTime;
-				if (waitTimer >= waitTime) 
-				{
-					ChangePatrolNode ();
-					SetDestination ();
-					NPCstate = state.WALKING;
-				}
-				break;
+		case state.WAITING:
+			spotLight.color = Color.green;
+			waitTimer += Time.deltaTime;
+			if (waitTimer >= waitTime) 
+			{
+				ChangePatrolNode ();
+				SetDestination ();
+				NPCstate = state.WALKING;
+			}
+			break;
 
-			case state.I_SEE_YOU:
-				LookAtSomething (aggressiveDestination);
-				spotLight.color = Color.red;
-				navMeshAgent.SetDestination (aggressiveDestination);
+		case state.I_SEE_YOU:
+			LookAtSomething (aggressiveDestination);
+			spotLight.color = Color.red;
+			navMeshAgent.SetDestination (aggressiveDestination);
 
-				//Should I start shooting?
-				if (navMeshAgent.remainingDistance <= shootingDistance && CanSeePlayer ()) 
+			//Should I start shooting?
+			if (navMeshAgent.remainingDistance <= shootingDistance && CanSeePlayer ()) 
+			{
+				navMeshAgent.SetDestination (gameObject.transform.position);
+				navMeshAgent.isStopped = true;
+				if (myTurrets.Length > 0) 
 				{
-					navMeshAgent.SetDestination (gameObject.transform.position);
-					navMeshAgent.isStopped = true;
-					if (myTurrets.Length > 0) 
+					for (int i = 0; i <= myTurrets.Length - 1; i++) 
 					{
-						for (int i = 0; i <= myTurrets.Length - 1; i++) 
-						{
-							myTurrets [i].active = true;
-						}
+						myTurrets [i].active = true;
 					}
-					NPCstate = state.SHOOTING;
 				}
+				NPCstate = state.SHOOTING;
+			}
 
-				//Did I lose track of the objective?
-				if (navMeshAgent.remainingDistance <= 1.0f && !CanSeePlayer()) 
-				{
-					alertTimer = 0f;
-					alertRotationTimer = 0f;
-					LookAtSomething (aggressiveDestination);
-					NPCstate = state.ALERT;
-				}
-				break;
-
-			case state.SHOOTING:
-				navMeshAgent.SetDestination (aggressiveDestination);
+			//Did I lose track of the objective?
+			if (navMeshAgent.remainingDistance <= 1.0f && !CanSeePlayer()) 
+			{
+				alertTimer = 0f;
+				alertRotationTimer = 0f;
 				LookAtSomething (aggressiveDestination);
-				if (!CanSeePlayer () || navMeshAgent.remainingDistance > shootingDistance) 
+				NPCstate = state.ALERT;
+			}
+			break;
+
+		case state.SHOOTING:
+			navMeshAgent.SetDestination (aggressiveDestination);
+			LookAtSomething (aggressiveDestination);
+			if (!CanSeePlayer () || navMeshAgent.remainingDistance > shootingDistance) 
+			{
+				navMeshAgent.isStopped = false;
+				if (myTurrets.Length > 0) 
 				{
-					navMeshAgent.isStopped = false;
-					if (myTurrets.Length > 0) 
+					for (int i = 0; i <= myTurrets.Length - 1; i++) 
 					{
-						for (int i = 0; i <= myTurrets.Length - 1; i++) 
-						{
-							myTurrets [i].active = false;
-						}
+						myTurrets [i].active = false;
 					}
-					NPCstate = state.I_SEE_YOU;
 				}
-				break;
+				NPCstate = state.I_SEE_YOU;
+			}
+			break;
 
-			case state.I_HEAR_YOU:
-				spotLight.color = Color.yellow;
-				if (navMeshAgent.remainingDistance <= 1.0f && !CanSeePlayer()) 
-				{
-					alertTimer = 0f;
-					alertRotationTimer = 0f;
-					NPCstate = state.ALERT;
-				}
-				break;
+		case state.I_HEAR_YOU:
+			spotLight.color = Color.yellow;
+			if (navMeshAgent.remainingDistance <= 1.0f && !CanSeePlayer()) 
+			{
+				alertTimer = 0f;
+				alertRotationTimer = 0f;
+				NPCstate = state.ALERT;
+			}
+			break;
 
-			case state.ALERT:
-				spotLight.color = Color.yellow;
-				Vector3 rotation = new Vector3 (0f, alertRotation, 0f);
-				gameObject.transform.Rotate (rotation * Time.deltaTime);
-				alertRotationTimer += Time.deltaTime;
-				if (alertRotationTimer >= alertRotationTime) 
-				{
-					alertRotation = alertRotation * (-1);
-					alertRotationTimer = 0;
-				}
+		case state.ALERT:
+			spotLight.color = Color.yellow;
+			Vector3 rotation = new Vector3 (0f, alertRotation, 0f);
+			gameObject.transform.Rotate (rotation * Time.deltaTime);
+			alertRotationTimer += Time.deltaTime;
+			if (alertRotationTimer >= alertRotationTime) 
+			{
+				alertRotation = alertRotation * (-1);
+				alertRotationTimer = 0;
+			}
 
-				alertTimer += Time.deltaTime;
-				if (alertTimer >= alertTime) 
-				{
-					SetDestination ();
-					NPCstate = state.WALKING;
-				}
-				break;
+			alertTimer += Time.deltaTime;
+			if (alertTimer >= alertTime) 
+			{
+				SetDestination ();
+				NPCstate = state.WALKING;
+			}
+			break;
 		}
 
 		//These two will always happen, no matter the state
@@ -228,12 +222,9 @@ public class NPCPatrol : MonoBehaviour
 	}
 
 	bool CanHearPlayer(){
-		if (Vector3.Distance (transform.position, player.transform.position) < viewDistance) 
+		if (player.noiseValue > Vector3.Distance (transform.position, player.transform.position)) 
 		{
-			if (player.noiseValue > hearingThreshold) 
-			{
-				return true;
-			}
+			return true;
 		}
 		return false;
 	}
@@ -274,7 +265,5 @@ public class NPCPatrol : MonoBehaviour
 	{
 		Gizmos.color = Color.white;
 		Gizmos.DrawRay (transform.position, transform.forward * viewDistance);
-
-		Gizmos.DrawWireSphere (transform.position, hearingDistance);
 	}
 }

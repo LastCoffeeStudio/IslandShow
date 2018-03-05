@@ -27,12 +27,6 @@ public class AIKamikaze : MonoBehaviour {
 	float viewDistance = 50.0f;
 
 	[SerializeField]
-	float hearingDistance = 20.0f;
-
-	[SerializeField]
-	float hearingThreshold = 10.0f;
-
-	[SerializeField]
 	float explodingDistance = 0.1f;
 
 	[SerializeField]
@@ -43,7 +37,7 @@ public class AIKamikaze : MonoBehaviour {
 
 	Light spotLight;
 	float viewAngle;
-	Player player;
+	PlayerController player;
 
 	[SerializeField]
 	LayerMask viewMask;
@@ -84,7 +78,7 @@ public class AIKamikaze : MonoBehaviour {
 
 		spotLight = gameObject.GetComponentInChildren<Light> ();
 		viewAngle = spotLight.spotAngle / 2;
-		player = FindObjectOfType<Player>();
+		player = FindObjectOfType<PlayerController>();
 	}
 
 	// Update is called once per frame
@@ -197,12 +191,9 @@ public class AIKamikaze : MonoBehaviour {
 	}
 
 	bool CanHearPlayer(){
-		if (Vector3.Distance (transform.position, player.transform.position) < viewDistance) 
+		if (player.noiseValue > Vector3.Distance (transform.position, player.transform.position)) 
 		{
-			if (player.noiseValue > hearingThreshold) 
-			{
-				return true;
-			}
+			return true;
 		}
 		return false;
 	}
@@ -243,7 +234,5 @@ public class AIKamikaze : MonoBehaviour {
 	{
 		Gizmos.color = Color.white;
 		Gizmos.DrawRay (transform.position, transform.forward * viewDistance);
-
-		Gizmos.DrawWireSphere (transform.position, hearingDistance);
 	}
 }
