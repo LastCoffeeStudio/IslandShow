@@ -7,13 +7,14 @@ Material:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_Name: WaterBasicDaytime 1
-  m_Shader: {fileID: 4800000, guid: d1024a70140380549888a0a54228afd7, type: 3}
-  m_ShaderKeywords: _NORMALMAP
+  m_Shader: {fileID: 46, guid: 0000000000000000f000000000000000, type: 0}
+  m_ShaderKeywords: _ALPHABLEND_ON _DETAIL_MULX2 _NORMALMAP
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
-  m_CustomRenderQueue: -1
-  stringTagMap: {}
+  m_CustomRenderQueue: 3000
+  stringTagMap:
+    RenderType: Transparent
   disabledShaderPasses: []
   m_SavedProperties:
     serializedVersion: 3
@@ -40,23 +41,23 @@ Material:
         m_Offset: {x: 0, y: 0}
     - _DetailAlbedoMap:
         m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
+        m_Scale: {x: 100, y: 100}
         m_Offset: {x: 0, y: 0}
     - _DetailMask:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _DetailNormalMap:
-        m_Texture: {fileID: 0}
+        m_Texture: {fileID: 2800000, guid: 32e4a3b0f2c0e6244a7e40580f7b6550, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _EmissionMap:
         m_Texture: {fileID: 0}
-        m_Scale: {x: 3000, y: 3000}
+        m_Scale: {x: 500, y: 500}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: 23d48e66490fd824dbaffa8f88655a88, type: 3}
-        m_Scale: {x: 3000, y: 3000}
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 500, y: 500}
         m_Offset: {x: 0, y: 0}
     - _MetallicGlossMap:
         m_Texture: {fileID: 0}
@@ -81,25 +82,25 @@ Material:
     m_Floats:
     - _BumpPeturb: 82.07547
     - _BumpPeturb2: 0.745283
-    - _BumpScale: 1
+    - _BumpScale: 0.2
     - _Cutoff: 0.5
     - _DetailNormalMapScale: 1
-    - _DstBlend: 0
+    - _DstBlend: 10
     - _GlossMapScale: 1
-    - _Glossiness: 0.5
+    - _Glossiness: 0.98
     - _GlossyReflections: 1
     - _Highlight: 33.207546
-    - _Metallic: 0
-    - _Mode: 0
+    - _Metallic: 1
+    - _Mode: 2
     - _OcclusionStrength: 1
     - _Parallax: 0.02
     - _Shininess: 1
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
-    - _SrcBlend: 1
+    - _SrcBlend: 5
     - _UVSec: 0
     - _WaveScale: 0.1102
-    - _ZWrite: 1
+    - _ZWrite: 0
     - _bScale: 0.07
     - _bTwirl: 0.05
     - _distort: 0.1
@@ -107,7 +108,7 @@ Material:
     - BumpParm: {r: 1, g: 1, b: 1, a: 1}
     - WaveSpeed: {r: 9, g: 4.5, b: -8, a: -3.5}
     - _BumpMap_ST: {r: 1, g: 1, b: 0, a: 0}
-    - _Color: {r: 1, g: 1, b: 1, a: 1}
+    - _Color: {r: 0.8602941, g: 0.8602941, b: 0.8602941, a: 1}
     - _ColorControlCube_ST: {r: 1, g: 1, b: 0, a: 0}
     - _ColorControl_ST: {r: 1, g: 1, b: 0, a: 0}
     - _EdgeColor: {r: 0, g: 0.1, b: 0, a: 0.1}
