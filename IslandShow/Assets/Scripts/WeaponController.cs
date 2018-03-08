@@ -66,7 +66,10 @@ public class WeaponController : MonoBehaviour
 
             lastReloadAudio.Play();
 	    }
-        checkInputAnimations();
+		if (GameManager.gamePaused == false) 
+		{
+			checkInputAnimations ();
+		}
         aimAmmo();
     }
 

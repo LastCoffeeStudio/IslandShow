@@ -56,6 +56,9 @@ public class PlayerController : MonoBehaviour {
 	//At the start of the update() method, reset noiseValue to 0.
 	public float noiseValue = 0f;
 
+	private int maxHealth = 5;
+	public int health;
+
     void Start () {
         rb = GetComponent<Rigidbody>();
         animator = gameObject.GetComponentInChildren<Animator>();
@@ -66,6 +69,8 @@ public class PlayerController : MonoBehaviour {
         lineStyle.normal.background = tex;
 
         positionCameraAgac = new Vector3(cam.transform.localPosition.x, 0, cam.transform.localPosition.z);
+
+		health = maxHealth;
     }
 
     //Calcule 
@@ -78,8 +83,10 @@ public class PlayerController : MonoBehaviour {
     void Update ()
     {
 		noiseValue = 0f;
-
-        checkInput();
+		if (GameManager.gamePaused == false) 
+		{
+			checkInput ();
+		}
     }
 
     void OnGUI()
@@ -291,4 +298,6 @@ public class PlayerController : MonoBehaviour {
 
         return displacement;
     }
+
+
 }
