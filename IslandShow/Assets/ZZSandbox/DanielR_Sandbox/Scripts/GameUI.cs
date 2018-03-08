@@ -8,6 +8,9 @@ public class GameUI : MonoBehaviour {
 	[SerializeField]
 	Image pauseScreen;
 
+	[SerializeField]
+	Slider healthBar;
+
 	// Use this for initialization
 	void Start () {
 		
@@ -28,5 +31,10 @@ public class GameUI : MonoBehaviour {
 		{
 			pauseScreen.enabled = true;
 		}
+	}
+
+	public void ChangeHealthBar(int value)
+	{
+		healthBar.value = value;
 	}
 }
