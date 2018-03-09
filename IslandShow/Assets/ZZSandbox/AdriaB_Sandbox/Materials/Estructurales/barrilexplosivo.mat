@@ -6,7 +6,7 @@ Material:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: barril
+  m_Name: barrilexplosivo
   m_Shader: {fileID: 46, guid: 0000000000000000f000000000000000, type: 0}
   m_ShaderKeywords: _METALLICGLOSSMAP _NORMALMAP
   m_LightmapFlags: 4
@@ -19,7 +19,7 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - _BumpMap:
-        m_Texture: {fileID: 2800000, guid: a6d03c7a4ace0df4c84bd08845748409, type: 3}
+        m_Texture: {fileID: 2800000, guid: 4be97ec9a7d17d94b82868eaa370a8ef, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _DetailAlbedoMap:
@@ -39,15 +39,15 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: 8478d0f81dc77c34494c1fe398e8d207, type: 3}
+        m_Texture: {fileID: 2800000, guid: dbaeefdc2983dbb46a103ff4455d3552, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MetallicGlossMap:
-        m_Texture: {fileID: 2800000, guid: 6bfcb79b13d7201469b8b03db0108ea4, type: 3}
+        m_Texture: {fileID: 2800000, guid: 3fb40702ee528db49976f7b5159e97c7, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _OcclusionMap:
-        m_Texture: {fileID: 2800000, guid: 0a3e3b6cd9410bc4a94583f1320ec4aa, type: 3}
+        m_Texture: {fileID: 2800000, guid: e9765fd0464bdec4daa4915f7d39caed, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _ParallaxMap:
@@ -59,7 +59,7 @@ Material:
     - _Cutoff: 0.5
     - _DetailNormalMapScale: 1
     - _DstBlend: 0
-    - _GlossMapScale: 1
+    - _GlossMapScale: 0.61
     - _Glossiness: 0
     - _GlossyReflections: 1
     - _Metallic: 0
