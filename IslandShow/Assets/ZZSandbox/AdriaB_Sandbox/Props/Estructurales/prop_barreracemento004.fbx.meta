@@ -1,6 +1,6 @@
 fileFormatVersion: 2
-guid: 87990ec1aa6dde840b12ef9dd4029c6b
-timeCreated: 1520595462
+guid: 9a1458c915c1cfe4ca527d666c588714
+timeCreated: 1520609705
 licenseType: Free
 ModelImporter:
   serializedVersion: 22
@@ -18,7 +18,7 @@ ModelImporter:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: barreracemento003
-    second: {fileID: 2100000, guid: 1765dd8140d285e41b9d251926de0801, type: 2}
+    second: {fileID: 2100000, guid: cc1e50b92bdc67a4f9952a270e9de350, type: 2}
   materials:
     importMaterials: 1
     materialName: 0
