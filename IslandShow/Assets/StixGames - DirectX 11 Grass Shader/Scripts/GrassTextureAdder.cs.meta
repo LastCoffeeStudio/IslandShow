@@ -1,0 +1,17 @@
+fileFormatVersion: 2
+guid: 38615cf30be85af488c32eaca03c1b09
+labels:
+- Vegetation
+- Shader
+- Grass
+- DirectX11
+timeCreated: 1439445000
+licenseType: Store
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

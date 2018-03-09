@@ -1,0 +1,144 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: AlienMaterial
+  m_Shader: {fileID: 4800000, guid: 3bf110e890fd75d42b4aa6b12570640a, type: 3}
+  m_ShaderKeywords: GRASS_WIDTH_SMOOTHING SIMPLE_GRASS
+  m_LightmapFlags: 5
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _BumpMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _ColorMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Density:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DetailAlbedoMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DetailMask:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DetailNormalMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Displacement:
+        m_Texture: {fileID: 2800000, guid: e80c3c84ea861404d8a427db8b7abf04, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _EmissionMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _GrassTex00:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _GrassTex01:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _GrassTex02:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _GrassTex03:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MainTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MetallicGlossMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _OcclusionMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _ParallaxMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats:
+    - _BumpScale: 1
+    - _Cutoff: 0.5
+    - _DetailNormalMapScale: 1
+    - _Disorder: 10
+    - _DstBlend: 0
+    - _EdgeLength: 20
+    - _Glossiness: 0.5
+    - _GrassFadeEnd: 100
+    - _GrassFadeStart: 50
+    - _LODEnd: 100
+    - _LODMax: 5
+    - _LODStart: 20
+    - _MaxHeight00: 2
+    - _MaxHeight01: 1.5
+    - _MaxHeight02: 1.5
+    - _MaxHeight03: 1.5
+    - _MaxTessellation: 6
+    - _Metallic: 0
+    - _MinHeight00: 1
+    - _MinHeight01: 0.2
+    - _MinHeight02: 0.2
+    - _MinHeight03: 0.2
+    - _Mode: 0
+    - _OcclusionStrength: 1
+    - _Parallax: 0.02
+    - _Smoothness00: 0.629
+    - _Smoothness01: 0.5
+    - _Smoothness02: 0.5
+    - _Smoothness03: 0.5
+    - _Softness00: 0.108
+    - _Softness01: 0.5
+    - _Softness02: 0.5
+    - _Softness03: 0.5
+    - _SrcBlend: 1
+    - _UVSec: 0
+    - _Width00: 0.12
+    - _Width01: 0.1
+    - _Width02: 0.1
+    - _Width03: 0.1
+    - _WindRotation: 1.13
+    - _ZWrite: 1
+    m_Colors:
+    - _Color: {r: 1, g: 1, b: 1, a: 1}
+    - _Color00: {r: 0, g: 0.11080241, b: 0.845595, a: 1}
+    - _Color01: {r: 0.5, g: 0.7, b: 0.3, a: 1}
+    - _Color02: {r: 0.5, g: 0.7, b: 0.3, a: 1}
+    - _Color03: {r: 0.5, g: 0.7, b: 0.3, a: 1}
+    - _DensityValues: {r: 1, g: 1, b: 1, a: 1}
+    - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
+    - _GrassBottomColor: {r: 0.43382353, g: 0.43382353, b: 0.43382353, a: 1}
+    - _SecColor00: {r: 0.24264705, g: 0.90598416, b: 1, a: 1}
+    - _SecColor01: {r: 0.2, g: 0.5, b: 0.15, a: 1}
+    - _SecColor02: {r: 0.2, g: 0.5, b: 0.15, a: 1}
+    - _SecColor03: {r: 0.2, g: 0.5, b: 0.15, a: 1}
+    - _SpecColor00: {r: 0.42225346, g: 0.8088235, b: 0.58487946, a: 1}
+    - _SpecColor01: {r: 0.2, g: 0.2, b: 0.2, a: 1}
+    - _SpecColor02: {r: 0.2, g: 0.2, b: 0.2, a: 1}
+    - _SpecColor03: {r: 0.2, g: 0.2, b: 0.2, a: 1}
+    - _WindParams: {r: 10, g: 0.03, b: 5, a: 0.1}
