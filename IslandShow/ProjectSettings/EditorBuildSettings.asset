@@ -6,8 +6,8 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/ZZSandbox/Carlos_Sandbox/Menu Test.unity
-    guid: f5a9b036a99759f42b4ab56722cdd232
+    path: Assets/Scenes/Menu Test.unity
+    guid: 70e5d543f85ce384eb4eafc4024dd735
   - enabled: 1
-    path: Assets/ZZSandbox/Carlos_Sandbox/Island.unity
-    guid: 7178b595f4d046647890ff6358d4b382
+    path: Assets/Scenes/Island.unity
+    guid: 3e6e2190346d55644a1d7bf877e0de23
