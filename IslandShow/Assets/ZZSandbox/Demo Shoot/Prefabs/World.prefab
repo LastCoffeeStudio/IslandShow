@@ -52,23 +52,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ac2c1613f42b5e4f9b7ea45ecf71916, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Rc: 40
-  Rs: 6
-  Ra: 20
-  Ravoid: 20
-  Kc: 60
-  Ks: 50
-  Ka: 80
-  Kw: 10
-  Kavoid: 8000
-  Kplayer: 150
+  radioCohesion: 40
+  radioSeparation: 6
+  radioAligment: 20
+  radioAvoid: 20
+  KCohesion: 60
+  KSeparation: 50
+  KAligment: 80
+  KWonder: 10
+  KAvoid: 8000
+  KPlayer: 150
   KMinH: 200
-  maxA: 20
-  maxV: 20
-  MaxFieldOfViewAngle: 180
-  WanderJitter: 30
-  WanderRadius: 7.5
-  WanderDistance: 11
+  maxAcceleration: 20
+  maxVelocity: 20
+  maxFieldOfViewAngle: 180
+  wanderJitter: 180
+  wanderRadius: 30
+  wanderDistance: 100
 --- !u!114 &114883880004481444
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -84,10 +84,8 @@ MonoBehaviour:
     type: 2}
   nAgents: 20
   agents: []
-  bound: 50
-  spawnR: 25
+  spawnRadio: 50
   debugWonder: 0
-  text: {fileID: 0}
   hightPlayer: 5
   radiousPlayer: 3
   minimunHight: 0

@@ -42,7 +42,6 @@ public class CameraAgent : MonoBehaviour
         player = GameObject.FindGameObjectWithTag("Player");
         x = transform.position;
         v = new Vector3(Random.Range(-3, 3), Random.Range(-3, 3), Random.Range(-3, 3));
-        text = world.text;
         if (world.debugWonder) debugWanderCube = GameObject.CreatePrimitive(PrimitiveType.Cube);
     }
 

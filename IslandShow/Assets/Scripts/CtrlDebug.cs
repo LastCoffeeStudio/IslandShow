@@ -13,7 +13,7 @@ public class CtrlDebug : MonoBehaviour
     void Start ()
 	{
 	    activeDebug = false;
-	    player = GameObject.FindGameObjectWithTag("Player");
+	    player = GameObject.FindGameObjectWithTag("CameraPlayer");
         camerasDebug = GameObject.Find("CamerasDebug");
     }
 	

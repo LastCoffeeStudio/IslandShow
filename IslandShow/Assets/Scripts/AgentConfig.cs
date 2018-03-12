@@ -5,24 +5,24 @@ using UnityEngine;
 public class AgentConfig : MonoBehaviour
 {
 
-    public float Rc;
-    public float Rs;
-    public float Ra;
-    public float Ravoid;
+    public float radioCohesion;
+    public float radioSeparation;
+    public float radioAligment;
+    public float radioAvoid;
 
-    public float Kc;
-    public float Ks;
-    public float Ka;
-    public float Kw;
-    public float Kavoid;
-    public float Kplayer;
+    public float KCohesion;
+    public float KSeparation;
+    public float KAligment;
+    public float KWonder;
+    public float KAvoid;
+    public float KPlayer;
     public float KMinH;
 
-    public float maxA;
-    public float maxV;
-    public float MaxFieldOfViewAngle = 180;
+    public float maxAcceleration;
+    public float maxVelocity;
+    public float maxFieldOfViewAngle = 180;
 
-    public float WanderJitter;
-    public float WanderRadius;
-    public float WanderDistance;
+    public float wanderJitter;
+    public float wanderRadius;
+    public float wanderDistance;
 }
