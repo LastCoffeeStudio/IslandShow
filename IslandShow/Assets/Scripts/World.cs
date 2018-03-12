@@ -9,10 +9,8 @@ public class World : MonoBehaviour
     public Transform agentPrefab;
     public int nAgents ;
     public List<Agent> agents;
-    public float bound;
-    public float spawnR;
+    public float spawnRadio;
     public bool debugWonder = false;
-    public Text text;
 
     //In fact are player variables
     public float hightPlayer;
@@ -23,7 +21,6 @@ public class World : MonoBehaviour
 	{
         agents = new List<Agent>();
 	    spawn(agentPrefab, nAgents);
-	    text.text = nAgents.ToString();
         agents.AddRange(FindObjectsOfType<Agent>());
     }
 
@@ -35,7 +32,7 @@ public class World : MonoBehaviour
     {
         for (int i = 0; i < n; ++i)
         {
-            var obj = Instantiate(prefab, new Vector3(Random.Range(-spawnR, spawnR), 10, Random.Range(-spawnR, spawnR)),
+            var obj = Instantiate(prefab, new Vector3(Random.Range(-spawnRadio, spawnRadio), 10, Random.Range(-spawnRadio, spawnRadio)),
                 Quaternion.identity);
 
         }
@@ -49,7 +46,7 @@ public class World : MonoBehaviour
         {
             if (otherAgent != agent)
             {
-                if (Vector3.Distance(agent.x, otherAgent.x) <= radious)
+                if (Vector3.Distance(agent.position, otherAgent.position) <= radious)
                 {
                     neightbours.Add(otherAgent);
                 }
