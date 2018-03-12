@@ -66,7 +66,7 @@ public class WeaponController : MonoBehaviour
 
             lastReloadAudio.Play();
 	    }
-		if (GameManager.gamePaused == false) 
+		if (CtrlPause.gamePaused == false) 
 		{
 			checkInputAnimations ();
 		}

@@ -86,7 +86,7 @@ public class PlayerController : MonoBehaviour {
     void Update ()
     {
 		noiseValue = 0f;
-		if (GameManager.gamePaused == false) 
+		if (CtrlPause.gamePaused == false) 
 		{
 			checkInput ();
 		}

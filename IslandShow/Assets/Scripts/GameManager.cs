@@ -6,10 +6,8 @@ public class GameManager : MonoBehaviour {
 
     public static GameManager instance = null;
     public static bool debugMode = false;
-	public static bool gamePaused = false;
 
-	[SerializeField]
-	GameUI gameUI;
+
     
     void Awake () {
         if (instance == null)
@@ -29,28 +27,5 @@ public class GameManager : MonoBehaviour {
         {
             debugMode = !debugMode;
         }
-
-		if (Input.GetKeyDown(KeyCode.P))
-		{
-			PauseUnPause ();
-		}
-	}
-
-	void PauseUnPause()
-	{
-		gamePaused = !gamePaused;
-		if (gameUI) 
-		{
-			gameUI.TogglePauseScreen ();
-		}
-
-		if (gamePaused) 
-		{
-			Time.timeScale = 0;
-		} 
-		else 
-		{
-			Time.timeScale = 1;
-		}
 	}
 }

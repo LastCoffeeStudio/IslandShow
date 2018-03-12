@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEditor;
 
 public class CtrlGameState : MonoBehaviour {
 
@@ -13,7 +14,7 @@ public class CtrlGameState : MonoBehaviour {
         EXIT
     }
 
-    public  gameStates gameState;
+    public gameStates gameState;
     public GameObject[] endCameras;
     public float timeEndCamera;
 
@@ -23,6 +24,7 @@ public class CtrlGameState : MonoBehaviour {
 	// Use this for initialization
 	void Start ()
 	{
+		Lightmapping.Bake();
 	    gameState = gameStates.ACTIVE;
         if (endCameras.Length < 0)
         {

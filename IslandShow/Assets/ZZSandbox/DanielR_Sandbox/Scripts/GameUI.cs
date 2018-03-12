@@ -23,7 +23,7 @@ public class GameUI : MonoBehaviour {
 
 	public void TogglePauseScreen()
 	{
-		if (GameManager.gamePaused == false) 
+		if (CtrlPause.gamePaused == false) 
 		{
 			pauseScreen.enabled = false;
 		} 
