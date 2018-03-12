@@ -23,7 +23,7 @@ public class World : MonoBehaviour
 	{
         agents = new List<Agent>();
 	    spawn(agentPrefab, nAgents);
-	    text.text = nAgents.ToString();
+	   // text.text = nAgents.ToString();
         agents.AddRange(FindObjectsOfType<Agent>());
     }
 

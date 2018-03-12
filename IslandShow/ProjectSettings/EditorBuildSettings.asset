@@ -4,4 +4,10 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/ZZSandbox/Carlos_Sandbox/Menu Test.unity
+    guid: f5a9b036a99759f42b4ab56722cdd232
+  - enabled: 1
+    path: Assets/ZZSandbox/Carlos_Sandbox/Island.unity
+    guid: 7178b595f4d046647890ff6358d4b382
