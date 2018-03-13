@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: f94202050d0cd744995e3fed9a540e12
-timeCreated: 1520935921
+timeCreated: 1520941060
 licenseType: Free
 ModelImporter:
   serializedVersion: 22
@@ -18,7 +18,7 @@ ModelImporter:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: "ca\xF1ones"
-    second: {fileID: 2100000, guid: 1bc18bec7d40551478e7c0480a05ebd8, type: 2}
+    second: {fileID: 2100000, guid: 9007e0e5e764bab4c852d373d6551513, type: 2}
   materials:
     importMaterials: 1
     materialName: 0
