@@ -5,9 +5,12 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Menu Test.unity
     guid: 70e5d543f85ce384eb4eafc4024dd735
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
   - enabled: 1
-    path: Assets/Scenes/Island.unity
-    guid: 3e6e2190346d55644a1d7bf877e0de23
+    path: Assets/ZZSandbox/Level Design/Level Design.unity
+    guid: 2dc59fc19d00add4f8bdc4ef55aa7793
