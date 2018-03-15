@@ -18,15 +18,17 @@ MonoBehaviour:
   - z_pref_lockBrushSettings
   - z_pref_additionalVertexStreams
   - z_pref_hideWireframe
+  - prefab_avoidOverlappingGameObjects
   m_int_keys:
   - z_GIWorkflowMode
   - pushpull_brush_dir
+  - prefab_previewThumbSize
   m_float_keys: []
   m_string_keys: []
   m_Color_keys:
   - z_pref_brushColor
-  m_bool_values: 010101000001
-  m_int_values: 0100000000000000
+  m_bool_values: 01010100000100
+  m_int_values: 01000000000000003c000000
   m_float_values: []
   m_string_values: []
   m_Color_values:
