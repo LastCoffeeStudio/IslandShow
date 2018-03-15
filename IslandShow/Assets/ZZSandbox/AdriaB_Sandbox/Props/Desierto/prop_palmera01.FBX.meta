@@ -19,12 +19,12 @@ ModelImporter:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: leave
-    second: {fileID: 2100000, guid: 2937d62491a990543ace8442c6089c04, type: 2}
+    second: {fileID: 2100000, guid: 79a1c99aadcd5b74daa2afa023376fcd, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: trunk
-    second: {fileID: 2100000, guid: 79a1c99aadcd5b74daa2afa023376fcd, type: 2}
+    second: {fileID: 2100000, guid: 2bf2dfcf91d720a4d9087a002e3941e2, type: 2}
   materials:
     importMaterials: 1
     materialName: 0
