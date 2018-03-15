@@ -35,6 +35,8 @@ public class GameUI : MonoBehaviour {
 
 	public void ChangeHealthBar(int value)
 	{
+		print ("Value to apply to lifebar " + value);
 		healthBar.value = value;
+		print ("Value in lifebar now " + healthBar.value);
 	}
 }
