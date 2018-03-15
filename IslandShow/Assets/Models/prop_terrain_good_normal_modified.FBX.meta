@@ -31,7 +31,22 @@ ModelImporter:
     4300004: Buildings
     7400000: Take 001
     9500000: //RootNode
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Desert
+    second: {fileID: 2100000, guid: 9aa578e72e8d19c43b530e5da2df4c4e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Forest
+    second: {fileID: 2100000, guid: b0f2fe5d2eb31be4fa6a65b4e7ee7bbe, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Rocks
+    second: {fileID: 2100000, guid: e57715010beae6940adc097d9555d111, type: 2}
   materials:
     importMaterials: 1
     materialName: 0
