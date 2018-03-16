@@ -11,15 +11,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 35fc1a6584efa41f38b85fc9dd9d264e, type: 3}
   m_Name: Settings
   m_EditorClassIdentifier: 
-  m_bool_keys: []
+  m_bool_keys:
+  - z_pref_lockBrushToFirst
+  - prefab_avoidOverlappingGameObjects
   m_int_keys:
   - z_GIWorkflowMode
   - pushpull_brush_dir
+  - prefab_previewThumbSize
   m_float_keys: []
   m_string_keys: []
   m_Color_keys: []
-  m_bool_values: 
-  m_int_values: 0100000000000000
+  m_bool_values: 0101
+  m_int_values: 01000000000000003e000000
   m_float_values: []
   m_string_values: []
   m_Color_values: []
