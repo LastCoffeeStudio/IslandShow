@@ -11,6 +11,7 @@ public class CtrlGameState : MonoBehaviour {
         PAUSE,
         DEBUG,
         WIN,
+        DEATH,
         EXIT
     }
 
@@ -25,7 +26,7 @@ public class CtrlGameState : MonoBehaviour {
 	void Start ()
 	{
 		Lightmapping.Bake();
-	    gameState = gameStates.ACTIVE;
+	    gameState = gameStates.WIN;
         if (endCameras.Length < 0)
         {
             timerEndCamera = 0f;
@@ -50,6 +51,11 @@ public class CtrlGameState : MonoBehaviour {
                 break;
             case gameStates.WIN:
                 print("YOU WIIIIINNN!!!!");
+                //TODO: Got to Score sceen
+                break;
+            case gameStates.DEATH:
+                print("YOU DEATH!!!!");
+                //TODO: Got to Score sceen
                 break;
             case gameStates.EXIT:
                 break;
