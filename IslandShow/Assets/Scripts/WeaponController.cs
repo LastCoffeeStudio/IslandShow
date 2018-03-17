@@ -38,10 +38,15 @@ public class WeaponController : MonoBehaviour
 
     public int numDorms = 5;
 
+    private Inventory inventory;
+    public Inventory.AMMO_TYPE typeAmmo;
+
     void Start () {
         ammunition = maxAmmo;
         initialposition = transform.localPosition;
         animator = gameObject.GetComponent<Animator>();
+        inventory = GameObject.FindGameObjectWithTag("Player").GetComponent<Inventory>();
+        typeAmmo = Inventory.AMMO_TYPE.AMMO1;
     }
 
     private bool playLastReload = false;
@@ -118,15 +123,18 @@ public class WeaponController : MonoBehaviour
         }
         if (Input.GetKey(KeyCode.R) && ammunition < maxAmmo)
         {
-            reloading = true;
-            animator.SetBool("reloading",true);
-            playLastReload = false;
-            reloadAudio.Play();
-            if (ammunition == maxAmmo - 1)
+            if (inventory.getAmmo(typeAmmo) > 0)
             {
-                reloadAudio.Stop();
-                lastReloadAudio.Play();
-                animator.SetBool("lastBullet",true);
+                reloading = true;
+                animator.SetBool("reloading", true);
+                playLastReload = false;
+                reloadAudio.Play();
+                if (ammunition == maxAmmo - 1)
+                {
+                    reloadAudio.Stop();
+                    lastReloadAudio.Play();
+                    animator.SetBool("lastBullet", true);
+                }
             }
         }
     }
@@ -178,6 +186,7 @@ public class WeaponController : MonoBehaviour
     void increaseAmmo()
     {
         ++ammunition;
+        inventory.decreaseAmmo(typeAmmo, 1);
     }
 
     void endReload()

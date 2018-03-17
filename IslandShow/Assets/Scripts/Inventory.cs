@@ -13,7 +13,22 @@ public class Inventory : MonoBehaviour
 
     // Use this for initialization
     void Start () {
-		ammoInvenotry.Add(AMMO_TYPE.AMMO1, 100);
+		ammoInvenotry.Add(AMMO_TYPE.AMMO1, 2);
 	}
-	
+
+    public int getAmmo(AMMO_TYPE typeAmmo)
+    {
+        return ammoInvenotry[typeAmmo];
+    }
+
+    public void decreaseAmmo(AMMO_TYPE typeAmmo, int value)
+    {
+        ammoInvenotry[typeAmmo] -= value;
+    }
+
+    public void increaseAmmo(AMMO_TYPE typeAmmo, int value)
+    {
+        ammoInvenotry[typeAmmo] += value;
+    }
+
 }
