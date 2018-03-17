@@ -26,7 +26,7 @@ public class CtrlGameState : MonoBehaviour
 	void Start ()
 	{
 	    Lightmapping.Bake();
-        gameState = gameStates.WIN;
+        gameState = gameStates.ACTIVE;
       
     }
 
