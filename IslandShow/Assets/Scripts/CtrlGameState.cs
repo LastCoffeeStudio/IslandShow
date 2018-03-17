@@ -2,9 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEditor;
+using UnityEngine.Experimental.UIElements;
 
-public class CtrlGameState : MonoBehaviour {
+public class CtrlGameState : MonoBehaviour
+{
 
+    public GameObject score;
     public enum gameStates
     {
         ACTIVE,
@@ -45,11 +48,11 @@ public class CtrlGameState : MonoBehaviour {
             case gameStates.WIN:
                 print("YOU WIIIIINNN!!!!");
                 gameObject.GetComponent<CtrlCamerasWin>().enabled = true;
-                //TODO: Got to Score sceen
+                score.SetActive(true);
                 break;
             case gameStates.DEATH:
                 print("YOU DEATH!!!!");
-                //TODO: Got to Score sceen
+                score.SetActive(true);
                 break;
             case gameStates.EXIT:
                 break;
