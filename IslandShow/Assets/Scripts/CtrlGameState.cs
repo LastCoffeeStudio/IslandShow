@@ -16,22 +16,15 @@ public class CtrlGameState : MonoBehaviour {
     }
 
     public gameStates gameState;
-    public GameObject[] endCameras;
-    public float timeEndCamera;
+  
 
-    private uint activeEndCamera;
-    private float timerEndCamera;
     
 	// Use this for initialization
 	void Start ()
 	{
-		Lightmapping.Bake();
-	    gameState = gameStates.WIN;
-        if (endCameras.Length < 0)
-        {
-            timerEndCamera = 0f;
-            activeEndCamera = (uint)Random.Range(0, endCameras.Length);
-        }
+	    Lightmapping.Bake();
+        gameState = gameStates.WIN;
+      
     }
 
     public gameStates getGameState()
@@ -51,40 +44,12 @@ public class CtrlGameState : MonoBehaviour {
                 break;
             case gameStates.WIN:
                 print("YOU WIIIIINNN!!!!");
+                gameObject.GetComponent<CtrlCamerasWin>().enabled = true;
                 //TODO: Got to Score sceen
                 break;
             case gameStates.DEATH:
                 print("YOU DEATH!!!!");
                 //TODO: Got to Score sceen
-                break;
-            case gameStates.EXIT:
-                break;
-        }
-    }
-
-    private void Update()
-    {
-        switch (gameState)
-        {
-            case gameStates.ACTIVE:
-                break;
-            case gameStates.PAUSE:
-                break;
-            case gameStates.DEBUG:
-                break;
-            case gameStates.WIN:
-                timerEndCamera -= Time.deltaTime;
-                if (timerEndCamera <= 0f)
-                {
-                    if (endCameras.Length > 0)
-                    {
-                        endCameras[activeEndCamera].SetActive(false);
-                        activeEndCamera = (uint)Random.Range(0, endCameras.Length);
-                        endCameras[activeEndCamera].SetActive(true);
-                    }
-
-                    timerEndCamera = timeEndCamera;
-                }
                 break;
             case gameStates.EXIT:
                 break;
