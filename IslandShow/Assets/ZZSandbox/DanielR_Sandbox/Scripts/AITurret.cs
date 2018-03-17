@@ -24,9 +24,9 @@ public class AITurret : MonoBehaviour {
 	[SerializeField]
 	float alertRotationTime = 1.0f;
 
-	PlayerController player;
+    private GameObject player;
 
-	[SerializeField]
+    [SerializeField]
 	LayerMask viewMask;
 
 	float alertTimer;
@@ -40,8 +40,8 @@ public class AITurret : MonoBehaviour {
 	// Use this for initialization
 	void Start () 
 	{
-		player = FindObjectOfType<PlayerController>();
-		myTurrets = gameObject.GetComponentsInChildren<Turret> ();
+	    player = GameObject.FindGameObjectWithTag("Player");
+        myTurrets = gameObject.GetComponentsInChildren<Turret> ();
 	}
 
 	// Update is called once per frame

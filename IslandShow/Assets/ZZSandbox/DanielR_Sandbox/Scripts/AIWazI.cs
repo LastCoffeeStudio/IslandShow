@@ -38,9 +38,10 @@ public class AIWazI : MonoBehaviour {
 
 	Light spotLight;
 	float viewAngle;
-	PlayerController player;
+    private GameObject player;
+    private PlayerMovment playerMovment;
 
-	[SerializeField]
+    [SerializeField]
 	LayerMask viewMask;
 
 	NavMeshAgent navMeshAgent;
@@ -80,8 +81,9 @@ public class AIWazI : MonoBehaviour {
 
 		spotLight = gameObject.GetComponentInChildren<Light> ();
 		viewAngle = spotLight.spotAngle / 2;
-		player = FindObjectOfType<PlayerController>();
-		myTurrets = gameObject.GetComponentsInChildren<Turret> ();
+	    player = GameObject.FindGameObjectWithTag("Player");
+	    playerMovment = player.GetComponent<PlayerMovment>();
+        myTurrets = gameObject.GetComponentsInChildren<Turret> ();
 	}
 
 	// Update is called once per frame
@@ -222,7 +224,7 @@ public class AIWazI : MonoBehaviour {
 	}
 
 	bool CanHearPlayer(){
-		if (player.noiseValue > Vector3.Distance (transform.position, player.transform.position)) 
+		if (playerMovment.noiseValue > Vector3.Distance (transform.position, player.transform.position)) 
 		{
 			return true;
 		}

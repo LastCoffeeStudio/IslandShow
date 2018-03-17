@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerController : MonoBehaviour {
+public class PlayerMovment : MonoBehaviour {
 
     public float moveSpeed = 5f;
     public float runSpeed = 10f;
@@ -56,8 +56,7 @@ public class PlayerController : MonoBehaviour {
 	//At the start of the update() method, reset noiseValue to 0.
 	public float noiseValue = 0f;
 
-	private int maxHealth = 100;
-	public int health;
+	
 
 	[SerializeField]
 	GameUI gameUI;
@@ -73,7 +72,6 @@ public class PlayerController : MonoBehaviour {
 
         positionCameraAgac = new Vector3(cam.transform.localPosition.x, 0, cam.transform.localPosition.z);
 
-		health = maxHealth;
     }
 
     //Calcule 
@@ -302,28 +300,5 @@ public class PlayerController : MonoBehaviour {
         return displacement;
     }
 
-	//TODO: Final version projectiles are going to function with raycasts, so chances are the following method will completely change
-	void OnTriggerEnter(Collider collider)
-	{
-		if (collider.GetComponent<Projectile> ()) 
-		{
-			ChangeHealth (-1);
-			Destroy (collider.gameObject);
-		}
-	}
-
-	void ChangeHealth(int value)
-	{
-		health += value;
-		gameUI.ChangeHealthBar (health);
-
-		if (health > maxHealth) 
-		{
-			health = maxHealth;
-		} 
-		else if (health <= 0)
-		{
-			//TODO: Call for Game Over
-		}
-	}
+	
 }

@@ -37,7 +37,8 @@ public class AIKamikaze : MonoBehaviour {
 
 	Light spotLight;
 	float viewAngle;
-	PlayerController player;
+	private GameObject player;
+    private PlayerMovment playerMovment;
 
 	[SerializeField]
 	LayerMask viewMask;
@@ -78,7 +79,9 @@ public class AIKamikaze : MonoBehaviour {
 
 		spotLight = gameObject.GetComponentInChildren<Light> ();
 		viewAngle = spotLight.spotAngle / 2;
-		player = FindObjectOfType<PlayerController>();
+		player = GameObject.FindGameObjectWithTag("Player");
+	    playerMovment = player.GetComponent<PlayerMovment>();
+
 	}
 
 	// Update is called once per frame
@@ -191,7 +194,7 @@ public class AIKamikaze : MonoBehaviour {
 	}
 
 	bool CanHearPlayer(){
-		if (player.noiseValue > Vector3.Distance (transform.position, player.transform.position)) 
+		if (playerMovment.noiseValue > Vector3.Distance (transform.position, player.transform.position)) 
 		{
 			return true;
 		}
