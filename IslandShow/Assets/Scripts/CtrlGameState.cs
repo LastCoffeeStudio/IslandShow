@@ -1,8 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using UnityEditor;
-using UnityEngine.Experimental.UIElements;
+﻿using UnityEngine;
 
 public class CtrlGameState : MonoBehaviour
 {
@@ -19,15 +15,11 @@ public class CtrlGameState : MonoBehaviour
     }
 
     public gameStates gameState;
-  
-
     
 	// Use this for initialization
 	void Start ()
 	{
-	    Lightmapping.Bake();
         gameState = gameStates.ACTIVE;
-      
     }
 
     public gameStates getGameState()

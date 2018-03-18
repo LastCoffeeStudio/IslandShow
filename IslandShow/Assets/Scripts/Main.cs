@@ -1,13 +1,12 @@
 ﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEditor;
-using UnityEditor.SceneManagement;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
 public class Main : MonoBehaviour
 {
     public static Main instance = null;
+    public Slider loadBar;
 
     private void Awake()
     {
@@ -23,9 +22,20 @@ public class Main : MonoBehaviour
 
     private void Update() {}
 
-    public void playGame()
+    public void playGame(int levelIndex)
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        StartCoroutine(loadLevel(levelIndex));
+    }
+
+    IEnumerator loadLevel(int levelIndex)
+    {
+        AsyncOperation operation = SceneManager.LoadSceneAsync(levelIndex);
+
+        while (!operation.isDone)
+        {
+            loadBar.value = operation.progress;
+            yield return null;
+        }
     }
 
     public void quitGame()

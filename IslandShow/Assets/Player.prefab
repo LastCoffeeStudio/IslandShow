@@ -824,7 +824,6 @@ GameObject:
   - component: {fileID: 136382005618250936}
   - component: {fileID: 54248413131440820}
   - component: {fileID: 114980583077118688}
-  - component: {fileID: 114907806263756616}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -4212,31 +4211,7 @@ MonoBehaviour:
   esferaRoja: {fileID: 1875600123601928, guid: f9e53e24f85fa9549adb0b70849208db, type: 2}
   explosion: {fileID: 1538796440401936, guid: dc2e349666b67b147abf2bb01918ffd3, type: 2}
   numDorms: 5
---- !u!114 &114907806263756616
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1425876391066952}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ca48184e3dc11c24f8c39890f7871e04, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  pressureThreshold: 0.5
-  maxAngle: 180
-  radius: 1
-  directionalDisplacement: 0
-  displacementStrength: 1
-  displacementFalloff: 0.5
-  pressureStrength: 1
-  pressureFalloff: 0.5
-  offset: {x: 0, y: 0.5, z: 0}
-  rayDirection: {x: 0, y: -1, z: 0}
-  maxDistance: 2
-  grassLayer:
-    serializedVersion: 2
-    m_Bits: 256
+  typeAmmo: 0
 --- !u!114 &114980583077118688
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -4270,7 +4245,6 @@ MonoBehaviour:
   decreasePerSecond: 35
   smoothAgac: 5
   noiseValue: 0
-  health: 0
   gameUI: {fileID: 0}
 --- !u!124 &124390371024630324
 Behaviour:
