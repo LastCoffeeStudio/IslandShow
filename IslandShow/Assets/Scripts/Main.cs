@@ -7,25 +7,30 @@ using UnityEngine.SceneManagement;
 
 public class Main : MonoBehaviour
 {
-    public Scenes sceneSelected;
+    public static Main instance = null;
 
-    public enum Scenes
+    private void Awake()
     {
-        MENU,
-        GAME
+        if (instance == null)
+            instance = this;
+        else if (instance != this)
+            Destroy(gameObject);
+        DontDestroyOnLoad(gameObject);
     }
 
-	// Use this for initialization
-	void Start ()
-	{
-	   // Object.DontDestroyOnLoad(this.gameObject);
-        sceneSelected = Scenes.MENU;
-	}
-	
-    public void changeSceneTo(Scenes newScene)
+    // Use this for initialization
+    private void Start() {}
+
+    private void Update() {}
+
+    public void playGame()
     {
-        sceneSelected = newScene;
-        SceneManager.LoadScene((int)newScene);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+    }
+
+    public void quitGame()
+    {
+        Application.Quit();
     }
 
 }

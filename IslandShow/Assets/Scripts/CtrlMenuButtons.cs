@@ -15,7 +15,7 @@ public class CtrlMenuButtons : MonoBehaviour
 
     public void clickStart()
     {
-        main.changeSceneTo(Main.Scenes.GAME);
+        //main.changeSceneTo(Main.Scenes.GAME);
     }
 
     public void clickExit()
