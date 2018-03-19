@@ -37,10 +37,10 @@ public class OptionsController : MonoBehaviour {
         }
 
         resolutionDropdown.AddOptions(options);
-        //resolutionDropdown.value = resolutionValue;
-        //resolutionDropdown.RefreshShownValue();
+        resolutionDropdown.value = resolutionValue;
+        resolutionDropdown.RefreshShownValue();
 
-        //qualityDropdown.value = QualitySettings.GetQualityLevel();
+        qualityDropdown.value = QualitySettings.GetQualityLevel();
 
         fullscreenToggle.isOn = Screen.fullScreen;
         float volume = 0f;
@@ -71,7 +71,7 @@ public class OptionsController : MonoBehaviour {
 
     public void setResolution(int value)
     {
-        //Resolution resolution = resolutions[value];
-        //Screen.SetResolution(resolution.width,resolution.height,Screen.fullScreen,60);
+        Resolution resolution = resolutions[value];
+        Screen.SetResolution(resolution.width,resolution.height,Screen.fullScreen,60);
     }
 }

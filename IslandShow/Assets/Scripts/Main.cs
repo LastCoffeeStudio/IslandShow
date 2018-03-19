@@ -35,7 +35,6 @@ public class Main : MonoBehaviour
     IEnumerator loadLevel(string name)
     {
         AsyncOperation operation = SceneManager.LoadSceneAsync(name);
-
         while (!operation.isDone)
         {
             loadBar.value = operation.progress;
