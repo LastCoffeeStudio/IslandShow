@@ -41,6 +41,10 @@ public class WeaponController : MonoBehaviour
     private Inventory inventory;
     public Inventory.AMMO_TYPE typeAmmo;
 
+    public Text wazPuntuation;
+    public Text torretPuntuation;
+    public Text dronsPuntuation;
+
     void Start () {
         ammunition = maxAmmo;
         initialposition = transform.localPosition;

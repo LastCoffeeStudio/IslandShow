@@ -22,14 +22,19 @@ public class Main : MonoBehaviour
 
     private void Update() {}
 
-    public void playGame(int levelIndex)
+    public void playGame(string name)
     {
-        StartCoroutine(loadLevel(levelIndex));
+        StartCoroutine(loadLevel(name));
     }
 
-    IEnumerator loadLevel(int levelIndex)
+    public void loadSceneByName(string name)
     {
-        AsyncOperation operation = SceneManager.LoadSceneAsync(levelIndex);
+        SceneManager.LoadSceneAsync(name);
+    }
+
+    IEnumerator loadLevel(string name)
+    {
+        AsyncOperation operation = SceneManager.LoadSceneAsync(name);
 
         while (!operation.isDone)
         {

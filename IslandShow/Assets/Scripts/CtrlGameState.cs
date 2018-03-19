@@ -2,7 +2,7 @@
 
 public class CtrlGameState : MonoBehaviour
 {
-
+    public PlayerMovment playerMovement;
     public GameObject score;
     public enum gameStates
     {
@@ -40,10 +40,16 @@ public class CtrlGameState : MonoBehaviour
             case gameStates.WIN:
                 print("YOU WIIIIINNN!!!!");
                 gameObject.GetComponent<CtrlCamerasWin>().enabled = true;
+                Cursor.lockState = CursorLockMode.None;
+                Cursor.visible = true;
+                CtrlPause.gamePaused = true;
                 score.SetActive(true);
                 break;
             case gameStates.DEATH:
                 print("YOU DEATH!!!!");
+                Cursor.lockState = CursorLockMode.None;
+                Cursor.visible = true;
+                CtrlPause.gamePaused = true;
                 score.SetActive(true);
                 break;
             case gameStates.EXIT:

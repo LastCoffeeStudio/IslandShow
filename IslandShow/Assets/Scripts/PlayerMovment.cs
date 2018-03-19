@@ -56,9 +56,9 @@ public class PlayerMovment : MonoBehaviour {
 	//At the start of the update() method, reset noiseValue to 0.
 	public float noiseValue = 0f;
 
-	
+    private bool screenAbove = true;
 
-	[SerializeField]
+    [SerializeField]
 	GameUI gameUI;
 
     void Start () {
@@ -66,6 +66,7 @@ public class PlayerMovment : MonoBehaviour {
         animator = gameObject.GetComponentInChildren<Animator>();
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
+        CtrlPause.gamePaused = true;
 
         tex = Texture2D.whiteTexture;
         lineStyle = new GUIStyle();
@@ -104,6 +105,11 @@ public class PlayerMovment : MonoBehaviour {
         }
     }
 
+    public void setScreenAbove(bool screenAbove)
+    {
+        this.screenAbove = screenAbove;
+    }
+
     private void checkInput()
     {
         xMov = getAxis("Horizontal", snap);
@@ -122,11 +128,13 @@ public class PlayerMovment : MonoBehaviour {
 
         if (Input.GetKey(KeyCode.Mouse0))
         {
+            /*
             if (Cursor.lockState != CursorLockMode.Locked)
             {
                 Cursor.lockState = CursorLockMode.Locked;
                 Cursor.visible = false;
             }
+            */
         	spread += spreadPerSecond * Time.deltaTime;
         }
         else
