@@ -23,7 +23,12 @@ ModelImporter:
     4300004: prop_turret_face
     7400000: Take 001
     9500000: //RootNode
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: tex_turret
+    second: {fileID: 2100000, guid: d5cb80ee304ab874ebe65a10ff0eb2a7, type: 2}
   materials:
     importMaterials: 1
     materialName: 0

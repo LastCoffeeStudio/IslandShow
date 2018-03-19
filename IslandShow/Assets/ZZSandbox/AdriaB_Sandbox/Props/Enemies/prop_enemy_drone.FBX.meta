@@ -31,7 +31,12 @@ ModelImporter:
     4300006: prop_enemy_drone_elix4
     4300008: prop_enemy_drone_elix2
     9500000: //RootNode
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: flying drone
+    second: {fileID: 2100000, guid: 869d97c09ba754a488ab1f6c51ce6d65, type: 2}
   materials:
     importMaterials: 1
     materialName: 0

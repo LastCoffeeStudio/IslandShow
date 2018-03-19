@@ -106,7 +106,12 @@ ModelImporter:
     4300014: enemy_stalker_lfood001
     7400000: Take 001
     9500000: //RootNode
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Waz1
+    second: {fileID: 2100000, guid: d31d4eb28f9d5bf4a905001909d99670, type: 2}
   materials:
     importMaterials: 1
     materialName: 0
