@@ -65,6 +65,7 @@ public class PlayerMovment : MonoBehaviour {
         rb = GetComponent<Rigidbody>();
         animator = gameObject.GetComponentInChildren<Animator>();
         Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
 
         tex = Texture2D.whiteTexture;
         lineStyle = new GUIStyle();
@@ -116,14 +117,15 @@ public class PlayerMovment : MonoBehaviour {
             spread += spreadPerSecond * Time.deltaTime;
         }
 
-        xRot = Input.GetAxisRaw("Mouse X");
-        yRot = Input.GetAxisRaw("Mouse Y");
+        xRot = Input.GetAxis("Mouse X");
+        yRot = Input.GetAxis("Mouse Y");
 
         if (Input.GetKey(KeyCode.Mouse0))
         {
             if (Cursor.lockState != CursorLockMode.Locked)
             {
                 Cursor.lockState = CursorLockMode.Locked;
+                Cursor.visible = false;
             }
         	spread += spreadPerSecond * Time.deltaTime;
         }
