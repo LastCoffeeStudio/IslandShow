@@ -36,7 +36,7 @@ public class WeaponController : MonoBehaviour
     public GameObject esferaRoja;
     public GameObject explosion;
 
-    public int numDorms = 5;
+    public int numDrons = 0;
 
     private Inventory inventory;
     public Inventory.AMMO_TYPE typeAmmo;
@@ -44,6 +44,8 @@ public class WeaponController : MonoBehaviour
     public Text wazPuntuation;
     public Text torretPuntuation;
     public Text dronsPuntuation;
+    public Text totalEnemies;
+    public Text totalScore;
 
     void Start () {
         ammunition = maxAmmo;
@@ -51,6 +53,11 @@ public class WeaponController : MonoBehaviour
         animator = gameObject.GetComponent<Animator>();
         inventory = GameObject.FindGameObjectWithTag("Player").GetComponent<Inventory>();
         typeAmmo = Inventory.AMMO_TYPE.AMMO1;
+        dronsPuntuation.text = "-";
+        torretPuntuation.text = "-";
+        wazPuntuation.text = "-";
+        totalEnemies.text = "-";
+        totalScore.text = "0";
     }
 
     private bool playLastReload = false;
@@ -168,7 +175,6 @@ public class WeaponController : MonoBehaviour
                 if (hitInfo.transform.tag == "Agent")
                 {
                     destroyed = true;
-                    //numDronsText.text = numDorms.ToString();
                     Destroy(hitInfo.collider.gameObject);
                     GameObject.Instantiate(explosion, hitInfo.point, Quaternion.Euler(0f, 0f, 0f));
                 }
@@ -181,8 +187,11 @@ public class WeaponController : MonoBehaviour
         }
         if (destroyed)
         {
-            --numDorms;
-            //numDronsText.text = numDorms.ToString();
+            ++numDrons;
+            dronsPuntuation.text = numDrons.ToString();
+            totalEnemies.text = numDrons.ToString();
+            int totalScoreInt = numDrons * 1236;
+            totalScore.text = totalScoreInt.ToString();
         }
     }
        

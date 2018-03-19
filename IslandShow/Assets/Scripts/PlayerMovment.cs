@@ -66,7 +66,6 @@ public class PlayerMovment : MonoBehaviour {
         animator = gameObject.GetComponentInChildren<Animator>();
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
-        CtrlPause.gamePaused = true;
 
         tex = Texture2D.whiteTexture;
         lineStyle = new GUIStyle();

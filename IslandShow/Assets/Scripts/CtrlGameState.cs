@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 
 public class CtrlGameState : MonoBehaviour
 {
@@ -13,6 +14,9 @@ public class CtrlGameState : MonoBehaviour
         DEATH,
         EXIT
     }
+
+    public Text winState;
+    public Image medal;
 
     public gameStates gameState;
     
@@ -39,6 +43,8 @@ public class CtrlGameState : MonoBehaviour
                 break;
             case gameStates.WIN:
                 print("YOU WIIIIINNN!!!!");
+                winState.text = "YOU WIN!";
+                medal.enabled = true;
                 gameObject.GetComponent<CtrlCamerasWin>().enabled = true;
                 Cursor.lockState = CursorLockMode.None;
                 Cursor.visible = true;
@@ -47,6 +53,8 @@ public class CtrlGameState : MonoBehaviour
                 break;
             case gameStates.DEATH:
                 print("YOU DEATH!!!!");
+                winState.text = "YOU DIED!";
+                medal.enabled = false;
                 Cursor.lockState = CursorLockMode.None;
                 Cursor.visible = true;
                 CtrlPause.gamePaused = true;
