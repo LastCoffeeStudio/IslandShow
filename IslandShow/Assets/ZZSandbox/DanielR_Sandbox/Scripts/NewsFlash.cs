@@ -50,7 +50,7 @@ public class NewsFlash : MonoBehaviour {
 			incomingNews = true;
 			timeToMove = true;
 
-			transform.position = new Vector3 (Screen.width + rectTransform.rect.width / 2f, initialTextPosition.y, initialTextPosition.z);
+			transform.position = initialTextPosition/*new Vector3 (Screen.width + rectTransform.rect.width / 2f, initialTextPosition.y, initialTextPosition.z)*/;
 		}
 
 		if (timeToMove == true)
@@ -61,7 +61,7 @@ public class NewsFlash : MonoBehaviour {
 		if (incomingNews) {
 			transform.Translate (Vector3.left * textSpeed * Time.deltaTime);
 
-			if (transform.position.x < (-rectTransform.rect.width / 2f)) 
+			if (rectTransform.position.x < -rectTransform.rect.width) 
 			{
 				moveStartTime = Time.time;
 				incomingNews = false;
