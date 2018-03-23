@@ -25,7 +25,7 @@ SubstanceImporter:
         stringvalue: 
     - name: $randomseed
       value:
-        scalar[0]: 9341
+        scalar[0]: 2964
         scalar[1]: 0
         scalar[2]: 0
         scalar[3]: 0
@@ -41,7 +41,7 @@ SubstanceImporter:
         stringvalue: 
     - name: pebble_amount
       value:
-        scalar[0]: 0.5
+        scalar[0]: 0.208
         scalar[1]: 0
         scalar[2]: 0
         scalar[3]: 0
@@ -137,7 +137,7 @@ SubstanceImporter:
         stringvalue: 
     - name: luminosity
       value:
-        scalar[0]: 0.5
+        scalar[0]: 0.441
         scalar[1]: 0
         scalar[2]: 0
         scalar[3]: 0
@@ -193,7 +193,7 @@ SubstanceImporter:
         stringvalue: 
     - name: height_position
       value:
-        scalar[0]: 0.5
+        scalar[0]: 0.563
         scalar[1]: 0
         scalar[2]: 0
         scalar[3]: 0
@@ -201,7 +201,7 @@ SubstanceImporter:
         stringvalue: 
     - name: ambientocclusion_intensity
       value:
-        scalar[0]: 0.5
+        scalar[0]: 0.63
         scalar[1]: 0
         scalar[2]: 0
         scalar[3]: 0
@@ -210,7 +210,7 @@ SubstanceImporter:
     materialInformation:
       serializedVersion: 5
       offset: {x: 0, y: 0}
-      scale: {x: 1, y: 1}
+      scale: {x: 24, y: 24}
       generateMipmaps: 1
       generateAllOutputs: 0
       animationUpdateRate: 0
@@ -219,7 +219,7 @@ SubstanceImporter:
       texEnvs:
       - _BumpMap:
           texture: {instanceID: 0}
-          scale: {x: 1, y: 1}
+          scale: {x: 24, y: 12}
           offset: {x: 0, y: 0}
       - _DetailAlbedoMap:
           texture: {instanceID: 0}
@@ -235,23 +235,23 @@ SubstanceImporter:
           offset: {x: 0, y: 0}
       - _EmissionMap:
           texture: {instanceID: 0}
-          scale: {x: 1, y: 1}
+          scale: {x: 24, y: 24}
           offset: {x: 0, y: 0}
       - _MainTex:
           texture: {instanceID: 0}
-          scale: {x: 1, y: 1}
+          scale: {x: 24, y: 24}
           offset: {x: 0, y: 0}
       - _MetallicGlossMap:
           texture: {instanceID: 0}
-          scale: {x: 1, y: 1}
+          scale: {x: 24, y: 12}
           offset: {x: 0, y: 0}
       - _OcclusionMap:
           texture: {instanceID: 0}
-          scale: {x: 1, y: 1}
+          scale: {x: 24, y: 12}
           offset: {x: 0, y: 0}
       - _ParallaxMap:
           texture: {instanceID: 0}
-          scale: {x: 1, y: 1}
+          scale: {x: 24, y: 12}
           offset: {x: 0, y: 0}
       floats:
       - _BumpScale: 1.2
@@ -264,7 +264,7 @@ SubstanceImporter:
       - _Metallic: 0
       - _Mode: 0
       - _OcclusionStrength: 1
-      - _Parallax: 0.02
+      - _Parallax: 0.08
       - _SmoothnessTextureChannel: 0
       - _SpecularHighlights: 1
       - _SrcBlend: 1
@@ -295,6 +295,26 @@ SubstanceImporter:
       aniso: 1
       wrapMode: 0
     - name: desert_sand_dune_ambientocclusion
+      alphaSource: 0
+      filterMode: 1
+      aniso: 1
+      wrapMode: 0
+    - name: desert_sand_dune_diffuse
+      alphaSource: 6
+      filterMode: 1
+      aniso: 1
+      wrapMode: 0
+    - name: desert_sand_dune_specular
+      alphaSource: 7
+      filterMode: 1
+      aniso: 1
+      wrapMode: 0
+    - name: desert_sand_dune_glossiness
+      alphaSource: 0
+      filterMode: 1
+      aniso: 1
+      wrapMode: 0
+    - name: desert_sand_dune_roughness
       alphaSource: 0
       filterMode: 1
       aniso: 1

@@ -100,7 +100,7 @@ Material:
     - _Mode: 0
     - _OcclusionStrength: 1
     - _Parallax: 0.02
-    - _Rotation: 0
+    - _Rotation: 90
     - _SkyExponent1: -80.2
     - _SkyIntensity: 0.98
     - _SmoothnessTextureChannel: 0

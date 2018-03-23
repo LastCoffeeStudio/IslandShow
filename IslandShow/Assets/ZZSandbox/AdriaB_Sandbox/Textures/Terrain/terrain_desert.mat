@@ -28,15 +28,15 @@ Material:
         m_Offset: {x: 0, y: 0}
     - _BaseNormal:
         m_Texture: {fileID: 679034435, guid: 1028c942de3da0149b888597310f9f51, type: 3}
-        m_Scale: {x: 300, y: 300}
+        m_Scale: {x: 400, y: 400}
         m_Offset: {x: 0, y: 0}
     - _Blend:
         m_Texture: {fileID: -1386783132, guid: 8593ae292532a884d9d05de443ed74c0, type: 3}
-        m_Scale: {x: 200, y: 200}
+        m_Scale: {x: 400, y: 400}
         m_Offset: {x: 0, y: 0}
     - _BlendNormal:
         m_Texture: {fileID: -369358110, guid: 8593ae292532a884d9d05de443ed74c0, type: 3}
-        m_Scale: {x: 200, y: 200}
+        m_Scale: {x: 400, y: 400}
         m_Offset: {x: 0, y: 0}
     - _BumpMap:
         m_Texture: {fileID: 0}
@@ -60,7 +60,7 @@ Material:
         m_Offset: {x: 0, y: 0}
     - _MainTex:
         m_Texture: {fileID: -1369643864, guid: 1028c942de3da0149b888597310f9f51, type: 3}
-        m_Scale: {x: 150, y: 150}
+        m_Scale: {x: 400, y: 400}
         m_Offset: {x: 0, y: 0}
     - _MetallicGlossMap:
         m_Texture: {fileID: 0}

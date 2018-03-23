@@ -25,7 +25,7 @@ MonoBehaviour:
         motionVectorsResolution: 24
         motionVectorsAmplitude: 64
   fog:
-    m_Enabled: 1
+    m_Enabled: 0
     m_Settings:
       excludeSkybox: 1
   antialiasing:
@@ -40,11 +40,11 @@ MonoBehaviour:
         stationaryBlending: 0.95
         motionBlending: 0.85
   ambientOcclusion:
-    m_Enabled: 1
+    m_Enabled: 0
     m_Settings:
-      intensity: 0.17
-      radius: 1.76
-      sampleCount: 6
+      intensity: 0.15
+      radius: 1
+      sampleCount: 3
       downsampling: 0
       forceForwardCompatibility: 0
       ambientOnly: 0
@@ -69,15 +69,15 @@ MonoBehaviour:
       screenEdgeMask:
         intensity: 0.03
   depthOfField:
-    m_Enabled: 1
+    m_Enabled: 0
     m_Settings:
       focusDistance: 0.64
-      aperture: 4
+      aperture: 0.7
       focalLength: 8
       useCameraFov: 0
       kernelSize: 3
   motionBlur:
-    m_Enabled: 1
+    m_Enabled: 0
     m_Settings:
       shutterAngle: 270
       sampleCount: 10
@@ -112,7 +112,7 @@ MonoBehaviour:
     m_Enabled: 1
     m_Settings:
       tonemapping:
-        tonemapper: 1
+        tonemapper: 0
         neutralBlackIn: 0.02
         neutralWhiteIn: 10
         neutralBlackOut: 0
@@ -120,11 +120,11 @@ MonoBehaviour:
         neutralWhiteLevel: 5.3
         neutralWhiteClip: 10
       basic:
-        postExposure: 2
+        postExposure: 1.85
         temperature: 0
         tint: -1.6
         hueShift: -7
-        saturation: 1.442
+        saturation: 1.268
         contrast: 1.103
       channelMixer:
         red: {x: 1, y: 0, z: 0}
@@ -284,7 +284,7 @@ MonoBehaviour:
     m_Enabled: 1
     m_Settings:
       spectralTexture: {fileID: 0}
-      intensity: 0.054
+      intensity: 0.219
   grain:
     m_Enabled: 0
     m_Settings:
