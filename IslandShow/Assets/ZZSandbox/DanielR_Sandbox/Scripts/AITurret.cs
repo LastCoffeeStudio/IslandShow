@@ -34,6 +34,9 @@ public class AITurret : MonoBehaviour {
 	public float alertRotation = -2f;
 	Turret[] myTurrets;
 
+	[SerializeField]
+	GameObject objectThatActuallyRotates;
+
 	state NPCstate;
 
 
@@ -114,8 +117,10 @@ public class AITurret : MonoBehaviour {
 
 	void LookAtSomething(Vector3 something)
 	{
-		var lookPos = something - gameObject.transform.position;
-		transform.rotation = Quaternion.Slerp (gameObject.transform.rotation, Quaternion.LookRotation (lookPos), Time.deltaTime * 1);
+		var lookPos = something - objectThatActuallyRotates.transform.position + new Vector3(0f, 65f, 0f);
+		lookPos.x = lookPos.x * (-1);
+		lookPos.z = lookPos.z * (-1);
+		objectThatActuallyRotates.transform.rotation = Quaternion.Slerp (objectThatActuallyRotates.transform.rotation, Quaternion.LookRotation (lookPos), Time.deltaTime * 1);
 	}
 
 	void OnDrawGizmos()
