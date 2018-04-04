@@ -5,6 +5,8 @@ using UnityEngine;
 using UnityEngine.UI;
 using Random = UnityEngine.Random;
 
+//TODO: Make Inheritance with Weapon, shared with all weapon scripts
+
 public class WeaponController : MonoBehaviour
 {
     public AudioSource shotAudio;
@@ -52,7 +54,7 @@ public class WeaponController : MonoBehaviour
         initialposition = transform.localPosition;
         animator = gameObject.GetComponent<Animator>();
         inventory = GameObject.FindGameObjectWithTag("Player").GetComponent<Inventory>();
-        typeAmmo = Inventory.AMMO_TYPE.AMMO1;
+        typeAmmo = Inventory.AMMO_TYPE.SHOTGUNAMMO;
         dronsPuntuation.text = "-";
         torretPuntuation.text = "-";
         wazPuntuation.text = "-";
@@ -89,7 +91,7 @@ public class WeaponController : MonoBehaviour
         aimAmmo();
     }
 
-     void aimAmmo()
+    void aimAmmo()
     {
         if (!reloading)
         {
@@ -199,7 +201,7 @@ public class WeaponController : MonoBehaviour
     void increaseAmmo()
     {
         ++ammunition;
-        inventory.decreaseAmmo(typeAmmo, 1);
+        inventory.increaseAmmo(typeAmmo, 1);
     }
 
     void endReload()

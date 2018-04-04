@@ -8,6 +8,7 @@ TagManager:
   - Agent
   - CameraPlayer
   - loadBarSlider
+  - Weapon
   layers:
   - Default
   - TransparentFX

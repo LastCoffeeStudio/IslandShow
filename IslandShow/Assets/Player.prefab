@@ -824,6 +824,8 @@ GameObject:
   - component: {fileID: 136382005618250936}
   - component: {fileID: 54248413131440820}
   - component: {fileID: 114980583077118688}
+  - component: {fileID: 114995521256007350}
+  - component: {fileID: 114537941617869556}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -1736,6 +1738,7 @@ GameObject:
   - component: {fileID: 20073799201718910}
   - component: {fileID: 124390371024630324}
   - component: {fileID: 81294388012085362}
+  - component: {fileID: 114865092842372856}
   m_Layer: 0
   m_Name: Camera
   m_TagString: CameraPlayer
@@ -3316,15 +3319,15 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1425876391066952}
-  m_LocalRotation: {x: 0, y: 0.7891913, z: 0, w: 0.61414754}
-  m_LocalPosition: {x: -163.4, y: 88.1, z: -416.9}
+  m_LocalRotation: {x: -0, y: 0.7936476, z: -0, w: -0.6083778}
+  m_LocalPosition: {x: 177.29922, y: 71.38, z: -456.20468}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4659464703396196}
   - {fileID: 4483904799236648}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 104.22, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 254.94499, z: 0}
 --- !u!4 &4850327552009706
 Transform:
   m_ObjectHideFlags: 1
@@ -3928,7 +3931,8 @@ AudioSource:
   m_GameObject: {fileID: 1122897141617200}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 24300002, guid: 634ca97caf7a0c84eb1f2c39654664bf,
+    type: 2}
   m_audioClip: {fileID: 8300000, guid: d97de43f1cc6b974b8115ad8b5a8a03d, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
@@ -4008,7 +4012,8 @@ AudioSource:
   m_GameObject: {fileID: 1696211431671036}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 24300002, guid: 634ca97caf7a0c84eb1f2c39654664bf,
+    type: 2}
   m_audioClip: {fileID: 8300000, guid: c865ab65c00ae734fb54b3fdeaf454fe, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
@@ -4088,7 +4093,8 @@ AudioSource:
   m_GameObject: {fileID: 1872734280654164}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 24300002, guid: 634ca97caf7a0c84eb1f2c39654664bf,
+    type: 2}
   m_audioClip: {fileID: 8300000, guid: 518e3804bc77c9b4cadc7d7a534031d2, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
@@ -4196,8 +4202,8 @@ MonoBehaviour:
   smoothAmount: 3
   shootPoint: {fileID: 4870196656405458}
   camera: {fileID: 4659464703396196}
-  maxAmmo: 10
-  ammunition: 10
+  maxAmmo: 12
+  ammunition: 0
   text: {fileID: 0}
   numDronsText: {fileID: 0}
   aimPosition: {x: -0.19, y: -1.1, z: -0.26}
@@ -4210,8 +4216,36 @@ MonoBehaviour:
     type: 2}
   esferaRoja: {fileID: 1875600123601928, guid: f9e53e24f85fa9549adb0b70849208db, type: 2}
   explosion: {fileID: 1538796440401936, guid: dc2e349666b67b147abf2bb01918ffd3, type: 2}
-  numDorms: 5
+  numDrons: 0
   typeAmmo: 0
+  wazPuntuation: {fileID: 0}
+  torretPuntuation: {fileID: 0}
+  dronsPuntuation: {fileID: 0}
+  totalEnemies: {fileID: 0}
+  totalScore: {fileID: 0}
+--- !u!114 &114537941617869556
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1425876391066952}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 00ab3a4397ffcab43889923a0e67edf8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &114865092842372856
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1936591352007044}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff26db721962cdf4a8edcdfa9a767d2a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  profile: {fileID: 11400000, guid: d1b1e762ab8d07641a3362794169681a, type: 2}
 --- !u!114 &114980583077118688
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -4223,13 +4257,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 63a1b7cc814dfc449a45162734c3283c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 5
-  runSpeed: 10
+  moveSpeed: 4
+  runSpeed: 8
   agacSpeed: 2
   lookSensivity: 3
   swagLook: 1
   jumpForce: 450
-  groundDistance: 1.05
+  groundDistance: 1.08
   flyControl: 1
   axisSensitivity: 10
   snap: 1
@@ -4246,6 +4280,21 @@ MonoBehaviour:
   smoothAgac: 5
   noiseValue: 0
   gameUI: {fileID: 0}
+--- !u!114 &114995521256007350
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1425876391066952}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 95c95405cd6451c4bac944b9346ec4b1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 100
+  health: 0
+  gameUI: {fileID: 0}
+  ctrlGame: {fileID: 0}
 --- !u!124 &124390371024630324
 Behaviour:
   m_ObjectHideFlags: 1
@@ -4259,7 +4308,7 @@ CapsuleCollider:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1425876391066952}
-  m_Material: {fileID: 13400000, guid: 4ab9c76a953d00a4696b78e560538107, type: 2}
+  m_Material: {fileID: 13400000, guid: 24a28ae75a9ab1f44a3e14463314fdf0, type: 2}
   m_IsTrigger: 0
   m_Enabled: 1
   m_Radius: 0.5

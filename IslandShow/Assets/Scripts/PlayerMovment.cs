@@ -46,8 +46,8 @@ public class PlayerMovment : MonoBehaviour {
 
     private Texture2D tex;
     private GUIStyle lineStyle;
-    
-    Animator animator;
+
+    public Animator animator;
 
     private Vector3 positionCameraAgac;
     private Vector3 positionCameraOr = new Vector3(0, 0.5f, 0.29f);
@@ -63,7 +63,7 @@ public class PlayerMovment : MonoBehaviour {
 
     void Start () {
         rb = GetComponent<Rigidbody>();
-        animator = gameObject.GetComponentInChildren<Animator>();
+        //animator = gameObject.GetComponentInChildren<Animator>();
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
 
