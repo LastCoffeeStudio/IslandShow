@@ -243,7 +243,12 @@ ModelImporter:
     7400000: Take 001
     9500000: //RootNode
     13700000: prop_player_arms
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: gun1
+    second: {fileID: 2100000, guid: c37caae4ccbc3424a88d5f90236655ea, type: 2}
   materials:
     importMaterials: 1
     materialName: 0
