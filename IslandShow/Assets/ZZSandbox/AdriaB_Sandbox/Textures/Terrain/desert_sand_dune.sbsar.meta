@@ -11,7 +11,7 @@ SubstanceImporter:
     prototypeName: desert_sand_dune
     shaderName: 
     shader: {fileID: 46, guid: 0000000000000000f000000000000000, type: 0}
-    shaderKeywords: _METALLICGLOSSMAP _NORMALMAP _PARALLAXMAP
+    shaderKeywords: 
     renderQueue: -1
     lightmapFlags: 4
     inputs:
@@ -41,7 +41,7 @@ SubstanceImporter:
         stringvalue: 
     - name: pebble_amount
       value:
-        scalar[0]: 0.208
+        scalar[0]: 0.173
         scalar[1]: 0
         scalar[2]: 0
         scalar[3]: 0
@@ -210,7 +210,7 @@ SubstanceImporter:
     materialInformation:
       serializedVersion: 5
       offset: {x: 0, y: 0}
-      scale: {x: 24, y: 24}
+      scale: {x: 1, y: 1}
       generateMipmaps: 1
       generateAllOutputs: 0
       animationUpdateRate: 0
@@ -219,7 +219,7 @@ SubstanceImporter:
       texEnvs:
       - _BumpMap:
           texture: {instanceID: 0}
-          scale: {x: 24, y: 12}
+          scale: {x: 1, y: 1}
           offset: {x: 0, y: 0}
       - _DetailAlbedoMap:
           texture: {instanceID: 0}
@@ -239,19 +239,19 @@ SubstanceImporter:
           offset: {x: 0, y: 0}
       - _MainTex:
           texture: {instanceID: 0}
-          scale: {x: 24, y: 24}
+          scale: {x: 1, y: 1}
           offset: {x: 0, y: 0}
       - _MetallicGlossMap:
           texture: {instanceID: 0}
-          scale: {x: 24, y: 12}
+          scale: {x: 1, y: 1}
           offset: {x: 0, y: 0}
       - _OcclusionMap:
           texture: {instanceID: 0}
-          scale: {x: 24, y: 12}
+          scale: {x: 1, y: 1}
           offset: {x: 0, y: 0}
       - _ParallaxMap:
           texture: {instanceID: 0}
-          scale: {x: 24, y: 12}
+          scale: {x: 1, y: 1}
           offset: {x: 0, y: 0}
       floats:
       - _BumpScale: 1.2
