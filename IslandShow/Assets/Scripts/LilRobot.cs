@@ -59,6 +59,12 @@ public class LilRobot : MonoBehaviour {
         float y = Input.GetAxis("Vertical");*/
         /****/
 
+		if (!agent.isOnNavMesh)
+		{
+			agent.enabled = false;
+			agent.enabled = true;
+		}
+
         float distance = Vector3.Distance(target.position, transform.position);
 
         switch (state)
@@ -70,7 +76,7 @@ public class LilRobot : MonoBehaviour {
                 /****/
                 //rb.AddForce(transform.InverseTransformDirection(rb.velocity));
 
-                if (distance < detectionDistance)
+				if (distance < detectionDistance && agent.isOnNavMesh)
                 {
                     state = LilRobotState.ATTACK;
                 }
@@ -141,6 +147,6 @@ public class LilRobot : MonoBehaviour {
         //lastLocalRotation = head.localRotation;
 
         /** Update Debug Camera **/
-        lilRobCamera.position = transform.position - Vector3.forward * 2 + Vector3.up * 0.5f;
+        //lilRobCamera.position = transform.position - Vector3.forward * 2 + Vector3.up * 0.5f;
     }
 }
